@@ -4,6 +4,47 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+// ROBOTO font
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+//ROBOTO classes
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+//BUKRA font
 @font-face {
   font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
   font-family: "29lt-Bukra";
@@ -11,28 +52,25 @@
   font-weight: 300;
   src: url("./bukra/29ltbukralight.otf") format("opentype"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ woff2*/
 }
-/* open-sans-regular - latin */
+/* BUKRA-regular*/
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap; 
   font-family: "29lt-Bukra";
   font-style: normal;
   font-weight: 400;
-  src: url("./bukra/29ltbukraregular.ttf") format("opentype"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./bukra/29ltbukraregular.ttf") format("opentype");
 }
-/* open-sans-800 - latin */
+/* BUKRA-800  */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap; 
   font-family: "29lt-Bukra";
   font-style: normal;
   font-weight: 700;
-  src: url("./bukra/29ltbukrabold.ttf") format("opentype"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./bukra/29ltbukrabold.ttf") format("opentype");
 }
-input:focus-within {
-  outline: none;
-}
-body {
-  font-family: "29lt-Bukra";
-}
+//////////////////
+
+//variables
 $abad-gold: #fdb614;
 
 //Shared classes
@@ -40,7 +78,12 @@ $abad-gold: #fdb614;
 .abad-shadow {
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
 }
+
+
 //main styling
+body {
+  font-family: "29lt-Bukra";
+}
 header {
   nav {
     z-index: 2;
@@ -209,5 +252,36 @@ main {
       background-color: rgba(30, 30, 30, 0.5);
     }
   }
-
+  .articles{
+    article{
+      padding: 12px;
+      width: calc(100% / 3);
+      .article-wrapper{
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1),;
+        >img{
+          width: fit-content;
+        }
+        >div{
+          padding: 12px;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          padding-bottom: 20px;
+          p{
+            @extend .roboto-regular;
+            color: #172327;
+          }
+          h3{
+            font-size: 18px;
+            color: #1E1E1E;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,7 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.roboto-thin {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-regular, main .articles article .article-wrapper > div p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.roboto-medium {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.roboto-bold {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-black {
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+  font-style: normal;
 }
 
 @font-face {
@@ -11,32 +48,28 @@
   font-weight: 300;
   src: url("./bukra/29ltbukralight.otf") format("opentype"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ woff2*/
 }
-/* open-sans-regular - latin */
+/* BUKRA-regular*/
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "29lt-Bukra";
   font-style: normal;
   font-weight: 400;
-  src: url("./bukra/29ltbukraregular.ttf") format("opentype"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./bukra/29ltbukraregular.ttf") format("opentype");
 }
-/* open-sans-800 - latin */
+/* BUKRA-800  */
 @font-face {
-  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-display: swap;
   font-family: "29lt-Bukra";
   font-style: normal;
   font-weight: 700;
-  src: url("./bukra/29ltbukrabold.ttf") format("opentype"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+  src: url("./bukra/29ltbukrabold.ttf") format("opentype");
 }
-input:focus-within {
-  outline: none;
+.abad-shadow {
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 body {
   font-family: "29lt-Bukra";
-}
-
-.abad-shadow {
-  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 header nav {
@@ -189,4 +222,34 @@ main .reviews .swiper1-prev {
 }
 main .reviews .swiper1-next {
   background-color: rgba(30, 30, 30, 0.5);
+}
+main .articles article {
+  padding: 12px;
+  width: 33.3333333333%;
+}
+main .articles article .article-wrapper {
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+main .articles article .article-wrapper > img {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main .articles article .article-wrapper > div {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 20px;
+}
+main .articles article .article-wrapper > div p {
+  color: #172327;
+}
+main .articles article .article-wrapper > div h3 {
+  font-size: 18px;
+  color: #1E1E1E;
+  font-weight: 700;
 }/*# sourceMappingURL=style.css.map */
