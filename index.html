@@ -209,14 +209,14 @@
     <!-- PLAN start -->
     <section class="plan  relative p-10 overflow-hidden">
       <img src="/media/Share Section.png" class="absolute left-0 top-0 w-full h-full object-cover -z-10" alt="">
-      <div class="flex container justify-between max-w-screen-lg mx-auto">
-        <div class="flex items-center w-[45%]">
-          <div class="about text-white flex flex-col gap-4 ">
-            <img class="w-fit" src="/media/ft-logo 3.png" alt="">
+      <div class="flex flex-col gap-6 md:flex-row container justify-between max-w-screen-lg mx-auto">
+        <div class="flex items-center md:w-[45%]">
+          <div class="about text-center md:text-start text-white flex flex-col gap-4 ">
+            <img class="w-fit mx-auto md:mx-0" src="/media/ft-logo 3.png" alt="">
             <h3 class="font-bold text-4xl">ماهي خطة <span class="text-abad-gold">اباد للتدريب؟</span></h3>
             <p>معهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية المعلومات. معهد
               شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية المعلومات. </p>
-            <button class="bg-abad-gold w-fit text-black flex items-center gap-6 p-2 px-3 rounded-xl">
+            <button class="bg-abad-gold mx-auto md:mx-0 w-fit text-black flex items-center gap-6 p-2 px-3 rounded-xl">
               <span class="font-bold">اعرف المزيد</span>
               <svg class="text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                 fill="none">
@@ -227,47 +227,43 @@
             </button>
           </div>
         </div>
-        <div class="cards flex flex-col gap-6">
-          <div class="flex gap-6">
-            <figure class="card">
-              <div class="img">
-                <img src="/media/twitch.png" class="" alt="">
-              </div>
-              <figcaption>
-                <h4 class="font-bold">من اباد؟</h4>
-                <p>معهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية..</p>
-              </figcaption>
-            </figure>
-            <figure class="card">
-              <div class="img">
-                <img src="/media/twitch.png" class="" alt="">
-              </div>
-              <figcaption>
-                <h4 class="font-bold">من اباد؟</h4>
-                <p>معهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية..</p>
-              </figcaption>
-            </figure>
-          </div>
-          <div class="flex gap-6">
-            <figure class="card">
-              <div class="img">
-                <img src="/media/twitch.png" class="" alt="">
-              </div>
-              <figcaption>
-                <h4 class="font-bold">من اباد؟</h4>
-                <p>معهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية..</p>
-              </figcaption>
-            </figure>
-            <figure class="card">
-              <div class="img">
-                <img src="/media/twitch.png" class="" alt="">
-              </div>
-              <figcaption>
-                <h4 class="font-bold">من اباد؟</h4>
-                <p>معهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية..</p>
-              </figcaption>
-            </figure>
-          </div>
+        <div class="cards flex flex-wrap mx-auto flex-row gap-6 max-w-[500px]">
+          <figure class="card">
+            <div class="img">
+              <img src="/media/twitch.png" class="" alt="">
+            </div>
+            <figcaption>
+              <h4 class="font-bold">من اباد؟</h4>
+              <p>معهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية..</p>
+            </figcaption>
+          </figure>
+          <figure class="card">
+            <div class="img">
+              <img src="/media/twitch.png" class="" alt="">
+            </div>
+            <figcaption>
+              <h4 class="font-bold">من اباد؟</h4>
+              <p>معهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية..</p>
+            </figcaption>
+          </figure>
+          <figure class="card">
+            <div class="img">
+              <img src="/media/twitch.png" class="" alt="">
+            </div>
+            <figcaption>
+              <h4 class="font-bold">من اباد؟</h4>
+              <p>معهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية..</p>
+            </figcaption>
+          </figure>
+          <figure class="card">
+            <div class="img">
+              <img src="/media/twitch.png" class="" alt="">
+            </div>
+            <figcaption>
+              <h4 class="font-bold">من اباد؟</h4>
+              <p>معهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية..</p>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -502,11 +498,13 @@
     <!-- ================================================= -->
     <!-- CONTACT start -->
     <section class="contact w-full relative max-w-screen-lg mx-auto p-3 mb-10 ">
-      <div class="container relative flex py-7 md:py-4 px-4  md:p-10 gap-8 md:gap-[5%] flex-col md:flex-row rounded-xl overflow-hidden">
+      <div
+        class="container relative flex py-7 md:py-4 px-4  md:p-10 gap-8 md:gap-[5%] flex-col md:flex-row rounded-xl overflow-hidden">
         <img src="/media/Submit section.png" class="absolute left-0 top-0 w-full h-full object-cover -z-10" alt="">
         <div class="info text-white md:w-[45%] text-center md:text-start noto">
           <h3 class="noto-bold text-2xl md:text-3xl mb-4">اشترك في نشرة اباد للتدريب</h3>
-          <p class="noto-regular text-xs px-3 md:px-0 md:text-base">ومعهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في
+          <p class="noto-regular text-xs px-3 md:px-0 md:text-base">ومعهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم
+            الدورات التطويرية المتخصصة في
             تقنية المعلومات. معهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية
             المعلومات. </p>
         </div>
@@ -542,7 +540,8 @@
     <!-- CONTACT end -->
     <!-- FOOTER start -->
     <footer class="bg-[#303030] p-10">
-      <ul class="container text-white flex-col gap-4 md:gap-0 flex md:flex-row justify-between items-start max-w-screen-lg mx-auto">
+      <ul
+        class="container text-white flex-col gap-4 md:gap-0 flex md:flex-row justify-between items-start max-w-screen-lg mx-auto">
         <li class="max-w-[370px]">
           <img src="/media/ft-logo 3 (1).png" class="w-fit" alt="">
           <p class="noto my-3">ومعهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية

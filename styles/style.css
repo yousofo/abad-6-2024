@@ -169,6 +169,7 @@ main .plan .cards .card {
   background-color: white;
   padding: 20px 14px;
   width: 210px;
+  margin: auto;
 }
 main .plan .cards .card .img {
   border-radius: 50%;
