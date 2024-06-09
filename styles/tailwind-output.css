@@ -1208,6 +1208,10 @@ video {
     flex-direction: column;
   }
 
+  .md\:flex-wrap {
+    flex-wrap: wrap;
+  }
+
   .md\:gap-\[5\%\] {
     gap: 5%;
   }

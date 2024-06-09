@@ -265,7 +265,9 @@ main {
   .articles {
     article {
       padding: 12px;
-      width: calc(100% / 3);
+      @media (min-width:767px) {
+        width: calc(100% / 3);
+      }
       .article-wrapper {
         border-radius: 12px;
         display: flex;

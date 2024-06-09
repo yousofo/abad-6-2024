@@ -238,7 +238,11 @@ main .reviews .swiper1-next {
 }
 main .articles article {
   padding: 12px;
-  width: 33.3333333333%;
+}
+@media (min-width: 767px) {
+  main .articles article {
+    width: 33.3333333333%;
+  }
 }
 main .articles article .article-wrapper {
   border-radius: 12px;
