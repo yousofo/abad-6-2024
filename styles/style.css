@@ -1,0 +1,172 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "29lt-Bukra";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./bukra/29ltbukralight.otf") format("opentype"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ woff2*/
+}
+/* open-sans-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "29lt-Bukra";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./bukra/29ltbukraregular.ttf") format("opentype"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* open-sans-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "29lt-Bukra";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./bukra/29ltbukrabold.ttf") format("opentype"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+input:focus-within {
+  outline: none;
+}
+
+body {
+  font-family: "29lt-Bukra";
+}
+
+.abad-shadow {
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+header nav {
+  z-index: 2;
+  width: 90%;
+  position: relative;
+  background-color: transparent;
+}
+header nav a {
+  white-space: nowrap;
+}
+
+main .hero {
+  position: relative;
+}
+main .hero .intro {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+main .courses .courses-preview-mode {
+  color: #0f1416;
+}
+main .courses .courses-preview-mode.active {
+  background: linear-gradient(#1b45b4 100%, #1c2792 100%);
+}
+main .courses .courses-preview-mode.active svg {
+  color: white;
+}
+main .courses table {
+  border-spacing: 0 10px;
+  border-collapse: separate;
+}
+main .courses table td,
+main .courses table th {
+  padding: 14px;
+  border: 1px solid transparent;
+}
+main .courses table th {
+  font-size: 12px;
+}
+main .courses table td {
+  font-size: 14px;
+}
+main .courses nav li {
+  padding: 8px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #9891a3;
+}
+main .courses nav li.active {
+  color: white;
+  background-color: #fdb614;
+}
+main .courses > .show-all {
+  background: linear-gradient(to right, #1b45b4, #1c2792);
+}
+main .plan .cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  border-radius: 12px;
+  text-align: center;
+  background-color: white;
+  padding: 20px 14px;
+  width: 210px;
+}
+main .plan .cards .card .img {
+  border-radius: 50%;
+  padding: 18px;
+  background-color: #fff2ec;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main .plan .cards .card figcaption h4 {
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 6px;
+}
+main .plan .cards .card figcaption p {
+  font-size: 15px;
+  line-height: 1.5;
+}
+main .reviews .cards .cards-wrapper .card {
+  padding: 20px;
+}
+main .reviews .cards .cards-wrapper .card .card-wrapper {
+  padding: 20px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 12px;
+}
+main .reviews .cards .cards-wrapper .card .card-wrapper .review-details {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+main .reviews .cards .cards-wrapper .card .card-wrapper .review-details h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+main .reviews .cards .cards-wrapper .card .card-wrapper .review-details p {
+  font-size: 14px;
+}
+main .reviews .cards .cards-wrapper .card .card-wrapper .review-text {
+  font: bold;
+}
+main .reviews .cards .cards-wrapper .card .card-wrapper .review-stars {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+main .reviews .cards .cards-wrapper .card .card-wrapper .review-stars img {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+main .reviews .swiper1-btn {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+main .reviews .swiper1-prev {
+  background: linear-gradient(to right, #1C2792, #1B45B4);
+}
+main .reviews .swiper1-next {
+  background-color: rgba(30, 30, 30, 0.5);
+}/*# sourceMappingURL=style.css.map */
