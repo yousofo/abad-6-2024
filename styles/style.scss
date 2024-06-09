@@ -72,12 +72,32 @@ main {
       }
     }
     table {
-      border-spacing: 0 10px;
-      border-collapse: separate;
+      td,
+      th {
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+        color: #3F3E43;
+      }
+      .course-name{
+        font-size: 14px;
+      }
+      .course-start-date{
+        display: none;
+      }
+      @media (min-width: 768px) {
+        border-spacing: 0 10px;
+        border-collapse: separate;
+        td,
+        .course-start-date,
+        th {
+          display: table-cell;
+          padding: 14px;
+        }
+      }
     }
     table td,
     table th {
-      padding: 14px;
       border: 1px solid transparent;
     }
     table th {
@@ -174,7 +194,7 @@ main {
         }
       }
     }
-    .swiper1-btn{
+    .swiper1-btn {
       width: 40px;
       height: 40px;
       display: flex;
@@ -182,11 +202,12 @@ main {
       align-items: center;
       border-radius: 50%;
     }
-    .swiper1-prev{
-      background: linear-gradient(to right, #1C2792,#1B45B4);
+    .swiper1-prev {
+      background: linear-gradient(to right, #1c2792, #1b45b4);
     }
-    .swiper1-next{
+    .swiper1-next {
       background-color: rgba(30, 30, 30, 0.5);
     }
   }
+
 }

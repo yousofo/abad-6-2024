@@ -14,9 +14,9 @@
   <header class="absolute w-full top-0 pt-6">
     <nav class="font-bold container max-w-screen-xl px-4 flex mx-auto justify-between items-center">
       <a href="/index.html">
-        <img src="/media/abad-logo.png" alt="" class="w-44">
+        <img src="/media/abad-logo.png" alt="" class="min-w-36 max-w-44 w-full">
       </a>
-      <ul class="flex gap-6 text-white">
+      <ul class="hidden max-w-xl w-full justify-between text-white text-sm lg:text-base md:flex px-4">
         <li>
           <a href="">الرئيسية</a>
         </li>
@@ -36,31 +36,57 @@
           <a href="">اتصل بنا</a>
         </li>
       </ul>
-      <a href="#" class="bg-abad-gold rounded-xl p-2 px-4">
+      <a href="#" class="bg-abad-gold rounded-xl p-2 px-4 hidden md:block">
         تسجيل الدخول
       </a>
+      <svg class="md:hidden cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="31" height="28"
+        viewBox="0 0 31 28" fill="none">
+        <rect x="0.318181" y="0.318181" width="29.9091" height="27.3636" rx="4.77272" stroke="white"
+          stroke-width="0.636362" />
+        <path
+          d="M24.1817 21.6363H6.36355C5.66062 21.6363 5.09082 21.0664 5.09082 20.3636C5.09082 19.6607 5.66062 19.0908 6.36355 19.0908H24.1817C24.8846 19.0908 25.4545 19.6607 25.4545 20.3636C25.4544 21.0664 24.8846 21.6363 24.1817 21.6363Z"
+          fill="white" />
+        <path
+          d="M24.1817 15.2727H6.36355C5.66062 15.2727 5.09082 14.7029 5.09082 14C5.09082 13.2971 5.66062 12.7273 6.36355 12.7273H24.1817C24.8846 12.7273 25.4545 13.2971 25.4545 14C25.4545 14.703 24.8846 15.2727 24.1817 15.2727Z"
+          fill="white" />
+        <path
+          d="M24.1817 8.90899H6.36355C5.66062 8.90899 5.09082 8.33919 5.09082 7.63626C5.09082 6.93332 5.66062 6.36353 6.36355 6.36353H24.1817C24.8846 6.36353 25.4545 6.93332 25.4545 7.63626C25.4545 8.33919 24.8846 8.90899 24.1817 8.90899Z"
+          fill="white" />
+      </svg>
     </nav>
 
   </header>
   <main>
     <!-- HERO start  -->
-    <section class="hero">
+    <section class="hero h-dvh md:h-auto relative">
       <div
-        class="intro text-center absolute flex flex-col items-center justify-center gap-8 font-bold text-white w-max">
-        <h2 class="  text-3xl lg:text-4xl xl:text-5xl">تعلم بكل سهولة مع <span
+        class="intro text-center absolute flex flex-col items-center justify-center gap-8 font-bold text-white w-max max-w-full px-4">
+        <h2 class="text-2xl  md:text-3xl lg:text-4xl xl:text-5xl">تعلم بكل سهولة مع <span
             class="text-abad-gold whitespace-nowrap">اباد للتدريب</span></h2>
-        <h4 class="text-md">معهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة <br> في تقنية
-          المعلومات.</h4>
-        <a href="#" class="bg-abad-gold inline-block rounded-xl p-2 px-4 text-black">ابدأ التعلم</a>
+        <h4 class="text-sm md:text-md max-w-xl">معهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية
+          المتخصصة
+          في تقنية
+          المعلومات.
+        </h4>
+        <a href="#" class="bg-abad-gold flex items-center gap-5 rounded-xl p-2 px-4 text-black text-sm md:text-base">
+          <span>ابدأ التعلم</span>
+          <svg class="text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none">
+            <path d="M19 12H5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 5L5 12L12 19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
       </div>
-      <div class="back-shape overflow-hidden w-full -z-10">
-        <img class="w-full object-cover" src="/media/BackgroundHero.png" alt="">
+      <div class="back-shape overflow-hidden w-full -z-10 h-full md:h-auto">
+        <img class="w-full h-full md:h-auto object-cover" src="/media/BackgroundHero.png" alt="">
       </div>
     </section>
     <!-- HERO end  -->
     <!-- ================================================= -->
     <!-- COURSES start -->
     <section class="flex flex-col items-center gap-8 courses container px-4 max-w-screen-xl py-10 mx-auto">
+
+      <!-- courses preview options -->
       <div class="flex px-6 justify-between w-full">
         <h3 class="text-4xl font-bold">دورات أباد للتدريب</h3>
         <ul class="flex justify-center items-center gap-2">
@@ -89,8 +115,9 @@
           </li>
         </ul>
       </div>
+      <!-- courses filter -->
       <nav class="abad-shadow w-fit rounded-full py-3 px-4">
-        <ul class="flex gap-4 font-bold">
+        <ul class="flex gap-4 font-bold items-center">
           <li class="active">
             <button>الكل</button>
           </li>
@@ -103,45 +130,28 @@
           <li>
             <button>المالية</button>
           </li>
-          <li>
+          <li class="hidden md:list-item">
             <button>الفن</button>
           </li>
-          <li>
+          <li class="hidden md:list-item">
             <button>العلوم</button>
           </li>
-          <li>
+          <li class="hidden md:list-item">
             <button>البيانات الكبيرة</button>
           </li>
         </ul>
       </nav>
+      <!-- courses table -->
       <table class="w-full px-6">
-        <tr class="abad-shadow rounded-lg">
+        <tr class="abad-shadow rounded-lg hidden md:table-row">
           <th class="text-start">اسم الدورة</th>
           <th class="text-start">تاريخ بداية الدورة</th>
           <th class="text-start">وقت بداية الدورة</th>
           <th class="text-start">الاجراءات</th>
         </tr>
         <tr class="shadow rounded-lg">
-          <td>CCNA 200-301 شهادة سيسكو المعتمدة</td>
-          <td>16 مارس 2024</td>
-          <td>من 06:00 م حتى 10:00 م</td>
-          <td>
-            <button>التفاصيل</button>
-            <button>تسجيل</button>
-          </td>
-        </tr>
-        <tr class="shadow rounded-lg">
-          <td>CCNA 200-301 شهادة سيسكو المعتمدة</td>
-          <td>16 مارس 2024</td>
-          <td>من 06:00 م حتى 10:00 م</td>
-          <td>
-            <button>التفاصيل</button>
-            <button>تسجيل</button>
-          </td>
-        </tr>
-        <tr class="shadow rounded-lg">
-          <td>CCNA 200-301 شهادة سيسكو المعتمدة</td>
-          <td>16 مارس 2024</td>
+          <td class="course-name">CCNA 200-301 شهادة سيسكو المعتمدة</td>
+          <td class="course-start-date">16 مارس 2024</td>
           <td>من 06:00 م حتى 10:00 م</td>
           <td>
             <button>التفاصيل</button>
@@ -149,6 +159,7 @@
           </td>
         </tr>
       </table>
+
       <button class="text-white font-bold px-8 py-2.5 show-all flex items-center gap-5 rounded-xl">
         <span>عرض الكل</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -246,7 +257,8 @@
                     <p>مصمم الرسوم البيانية</p>
                   </div>
                 </div>
-                <p class="review-text">التعلم في اباد للتدريب كان مميز وسهل جدا يقدمون برامج ودورات عديدة ويمكنك الحضور عن طريق الفيديو والتمرين علي الشهادات الدولية المعتمدة ، ارشح اباد للتدريب بكل قوة</p>
+                <p class="review-text">التعلم في اباد للتدريب كان مميز وسهل جدا يقدمون برامج ودورات عديدة ويمكنك الحضور
+                  عن طريق الفيديو والتمرين علي الشهادات الدولية المعتمدة ، ارشح اباد للتدريب بكل قوة</p>
                 <div class="review-stars">
                   <img src="/media/Star 1.png" alt="">
                   <img src="/media/Star 1.png" alt="">
@@ -265,7 +277,8 @@
                     <p>مصمم الرسوم البيانية</p>
                   </div>
                 </div>
-                <p class="review-text">التعلم في اباد للتدريب كان مميز وسهل جدا يقدمون برامج ودورات عديدة ويمكنك الحضور عن طريق الفيديو والتمرين علي الشهادات الدولية المعتمدة ، ارشح اباد للتدريب بكل قوة</p>
+                <p class="review-text">التعلم في اباد للتدريب كان مميز وسهل جدا يقدمون برامج ودورات عديدة ويمكنك الحضور
+                  عن طريق الفيديو والتمرين علي الشهادات الدولية المعتمدة ، ارشح اباد للتدريب بكل قوة</p>
                 <div class="review-stars">
                   <img src="/media/Star 1.png" alt="">
                   <img src="/media/Star 1.png" alt="">
@@ -284,7 +297,8 @@
                     <p>مصمم الرسوم البيانية</p>
                   </div>
                 </div>
-                <p class="review-text">التعلم في اباد للتدريب كان مميز وسهل جدا يقدمون برامج ودورات عديدة ويمكنك الحضور عن طريق الفيديو والتمرين علي الشهادات الدولية المعتمدة ، ارشح اباد للتدريب بكل قوة</p>
+                <p class="review-text">التعلم في اباد للتدريب كان مميز وسهل جدا يقدمون برامج ودورات عديدة ويمكنك الحضور
+                  عن طريق الفيديو والتمرين علي الشهادات الدولية المعتمدة ، ارشح اباد للتدريب بكل قوة</p>
                 <div class="review-stars">
                   <img src="/media/Star 1.png" alt="">
                   <img src="/media/Star 1.png" alt="">
@@ -303,7 +317,8 @@
                     <p>مصمم الرسوم البيانية</p>
                   </div>
                 </div>
-                <p class="review-text">التعلم في اباد للتدريب كان مميز وسهل جدا يقدمون برامج ودورات عديدة ويمكنك الحضور عن طريق الفيديو والتمرين علي الشهادات الدولية المعتمدة ، ارشح اباد للتدريب بكل قوة</p>
+                <p class="review-text">التعلم في اباد للتدريب كان مميز وسهل جدا يقدمون برامج ودورات عديدة ويمكنك الحضور
+                  عن طريق الفيديو والتمرين علي الشهادات الدولية المعتمدة ، ارشح اباد للتدريب بكل قوة</p>
                 <div class="review-stars">
                   <img src="/media/Star 1.png" alt="">
                   <img src="/media/Star 1.png" alt="">
@@ -322,7 +337,8 @@
                     <p>مصمم الرسوم البيانية</p>
                   </div>
                 </div>
-                <p class="review-text">التعلم في اباد للتدريب كان مميز وسهل جدا يقدمون برامج ودورات عديدة ويمكنك الحضور عن طريق الفيديو والتمرين علي الشهادات الدولية المعتمدة ، ارشح اباد للتدريب بكل قوة</p>
+                <p class="review-text">التعلم في اباد للتدريب كان مميز وسهل جدا يقدمون برامج ودورات عديدة ويمكنك الحضور
+                  عن طريق الفيديو والتمرين علي الشهادات الدولية المعتمدة ، ارشح اباد للتدريب بكل قوة</p>
                 <div class="review-stars">
                   <img src="/media/Star 1.png" alt="">
                   <img src="/media/Star 1.png" alt="">
@@ -336,13 +352,15 @@
           <div class="flex justify-center gap-8 mt-8">
             <div class=" swiper1-btn swiper1-prev">
               <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
-                <path d="M1 0.999999L7 7L1 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <path d="M1 0.999999L7 7L1 13" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </div>
             <div class=" swiper1-btn swiper1-next">
               <svg xmlns="http://www.w3.org/2000/svg" width="8" height="14" viewBox="0 0 8 14" fill="none">
-                <path d="M7 13L1 7L7 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
+                <path d="M7 13L1 7L7 1" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
             </div>
           </div>
         </div>
@@ -351,10 +369,43 @@
     <!-- REVIEWS end -->
     <!-- ================================================= -->
     <!-- TRUST start -->
-    <section class="relative p-10 overflow-hidden">
-      <img src="/media/Trust company & Play section.png" class="absolute left-0 top-0 w-full object-cover -z-10" alt="">
+    <section class="relative p-14 overflow-hidden">
+      <img src="/media/Trust company & Play section.png"
+        class="absolute min-h-96 left-0 top-0 w-full object-cover -z-10" alt="">
+      <div class="container flex flex-col items-center gap-14 mx-auto">
+        <h2 class="font-bold text-4xl text-center text-white max-w-2xl leading-normal">اعرف اكثر عن <span
+            class="text-abad-gold">اباد للتدريب</span> عن طريق مشاهدتك لهذا الفيديو!</h2>
+        <div class="video relative">
+          <video poster="/media/arab-work-laptop.png">
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+          <img src="/media/media Icon.png"
+            class="absolute cursor-pointer left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" alt="">
+        </div>
+      </div>
     </section>
     <!-- TRUST end -->
+    <!-- PARTNERS start -->
+    <section class="partners">
+      <h2 class="text-4xl text-center font-bold">شركاء النجاح</h2>\
+      <div class="container max-w-screen-lg flex px-8 justify-between w-full mx-auto">
+        <img src="/media/gitlab-logo-svg-150px.png" alt="">
+        <img src="/media/lattice-logo-svg-150px.png" alt="">
+        <img src="/media/sendgrid-logo-svg-150px.png" alt="">
+        <img src="/media/pendo-logo-svg-150px.png" alt="">
+        <img src="/media/pingdom-dark.png" alt="">
+      </div>
+    </section>
+    <!-- PARTNERS end -->
+    <!-- ARTICLES start -->
+    <section class="article p-14">
+      <h6 class="bg-[#F9F5F2] rounded-lg w-fit m-auto p-2">مدونة ومقالة</h6>
+      <h2 class="text-4xl font-bold mx-auto my-7 w-fit">ألقِ نظرة على أحدث المقالات</h2>
+      <div class="container"></div>
+    </section>
+    <!-- ARTICLES end -->
   </main>
   <script src="/js/app.js" type="module">
 

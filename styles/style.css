@@ -66,13 +66,33 @@ main .courses .courses-preview-mode.active {
 main .courses .courses-preview-mode.active svg {
   color: white;
 }
-main .courses table {
-  border-spacing: 0 10px;
-  border-collapse: separate;
+main .courses table td,
+main .courses table th {
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: #3F3E43;
+}
+main .courses table .course-name {
+  font-size: 14px;
+}
+main .courses table .course-start-date {
+  display: none;
+}
+@media (min-width: 768px) {
+  main .courses table {
+    border-spacing: 0 10px;
+    border-collapse: separate;
+  }
+  main .courses table td,
+  main .courses table .course-start-date,
+  main .courses table th {
+    display: table-cell;
+    padding: 14px;
+  }
 }
 main .courses table td,
 main .courses table th {
-  padding: 14px;
   border: 1px solid transparent;
 }
 main .courses table th {
@@ -165,7 +185,7 @@ main .reviews .swiper1-btn {
   border-radius: 50%;
 }
 main .reviews .swiper1-prev {
-  background: linear-gradient(to right, #1C2792, #1B45B4);
+  background: linear-gradient(to right, #1c2792, #1b45b4);
 }
 main .reviews .swiper1-next {
   background-color: rgba(30, 30, 30, 0.5);
