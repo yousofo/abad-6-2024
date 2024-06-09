@@ -15,3 +15,18 @@ const swiper1 = new Swiper(".swiper1", {
     }
   },
 });
+const swiper2 = new Swiper(".swiper2", {
+  speed: 700,
+  slidesPerView: 3,
+  spaceBetween: 30,
+  loop: true,
+  autoplay:true,
+  loopAddBlankSlides:true,
+  breakpoints: {
+    768: {
+      loop: false,
+      autoplay:false,
+      slidesPerView: 5,
+    }
+  },
+});

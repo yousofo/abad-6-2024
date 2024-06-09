@@ -401,11 +401,13 @@
     <!-- REVIEWS end -->
     <!-- ================================================= -->
     <!-- TRUST start -->
-    <section class="relative p-14 overflow-hidden">
+    <section class="relative p-8 md:p-14 overflow-hidden">
       <img src="/media/Trust company & Play section.png"
-        class="absolute min-h-96 left-0 top-0 w-full object-cover -z-10" alt="">
+        class="absolute min-h-96 left-0 hidden md:block top-0 w-full object-cover -z-10" alt="">
+      <img src="/media/Trust company & Play section-small.png"
+        class="absolute min-h-96 left-0 top-0 block md:hidden w-full object-cover -z-10" alt="">
       <div class="container flex flex-col items-center gap-14 mx-auto">
-        <h2 class="font-bold text-4xl text-center text-white max-w-2xl leading-normal">اعرف اكثر عن <span
+        <h2 class="font-bold max-w-[220px] text-2xl md:text-4xl text-center text-white md:max-w-2xl leading-normal">اعرف اكثر عن <span
             class="text-abad-gold">اباد للتدريب</span> عن طريق مشاهدتك لهذا الفيديو!</h2>
         <div class="video relative">
           <video poster="/media/arab-work-laptop.png">
@@ -414,29 +416,33 @@
             Your browser does not support the video tag.
           </video>
           <img src="/media/media Icon.png"
-            class="absolute cursor-pointer left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" alt="">
+            class="absolute w-8 md:w-fit cursor-pointer left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2" alt="">
         </div>
       </div>
     </section>
     <!-- TRUST end -->
     <!-- ================================================= -->
     <!-- PARTNERS start -->
-    <section class="partners py-10">
-      <h2 class="text-4xl text-center font-bold my-7 text-[#1E1E1E]">شركاء النجاح</h2>\
-      <div class="container max-w-full lg:max-w-screen-lg md:flex px-8 justify-between w-full mx-auto">
-        <img src="/media/gitlab-logo-svg-150px.png" alt="">
-        <img src="/media/lattice-logo-svg-150px.png" alt="">
-        <img src="/media/sendgrid-logo-svg-150px.png" alt="">
-        <img src="/media/pendo-logo-svg-150px.png" alt="">
-        <img src="/media/pingdom-dark.png" alt="">
+    <section class="partners py-10 px-8">
+      <h2 class="text-4xl text-center font-bold my-8 text-[#1E1E1E]">شركاء النجاح</h2>
+      <div class="swiper swiper2 container max-w-full lg:max-w-screen-lg  w-full mx-auto">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="/media/gitlab-logo-svg-150px.png" alt=""></div>
+          <div class="swiper-slide"><img src="/media/lattice-logo-svg-150px.png" alt=""></div>
+          <div class="swiper-slide"><img src="/media/sendgrid-logo-svg-150px.png" alt=""></div>
+          <div class="swiper-slide"><img src="/media/gitlab-logo-svg-150px.png" alt=""></div>
+          <div class="swiper-slide"><img src="/media/pendo-logo-svg-150px.png" alt=""></div>
+          <div class="swiper-slide"><img src="/media/pingdom-dark.png" alt=""></div>
+        </div>
       </div>
+      <!-- <div class="md:flex  justify-between  "></div> -->
     </section>
     <!-- PARTNERS end -->
     <!-- ================================================= -->
     <!-- ARTICLES start -->
-    <section class="articles p-14">
+    <section class="articles p-8 md:p-14">
       <h6 class="bg-[#F9F5F2] rounded-lg w-fit m-auto p-2">مدونة ومقالة</h6>
-      <h2 class="text-4xl font-bold mx-auto my-7 w-fit text-[#1E1E1E]">ألقِ نظرة على أحدث المقالات</h2>
+      <h2 class="text-2xl md:text-4xl text-center font-bold mx-auto my-7 w-fit text-[#1E1E1E]">ألقِ نظرة على أحدث المقالات</h2>
       <div class="container max-w-screen-lg mx-auto flex flex-wrap pt-10">
         <article>
           <div class="article-wrapper ">
