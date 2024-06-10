@@ -133,6 +133,20 @@ main {
       }
       .course-name {
         font-size: 14px;
+        >div{
+          display: flex;
+          gap: 12px;
+          span{
+            display: flex;
+            align-items: center;
+            gap: 3px;
+            color: #008000;
+          }
+          span:nth-child(2){
+            font-size: 12px;
+            color: #1B39A6;
+          }
+        }
       }
       .course-start-date {
         display: none;
@@ -145,6 +159,24 @@ main {
         th {
           display: table-cell;
           padding: 14px;
+        }
+      }
+      .btns{
+        display: flex;
+        gap: 8px;
+        button{
+          padding: 6px 12px;
+          border-radius: 4px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        button:nth-child(1){
+          background-color: #F6F6F6;
+        }
+        button:nth-child(2){
+          background-color: #F0F6EC;
+          color: #6EA641;
         }
       }
     }

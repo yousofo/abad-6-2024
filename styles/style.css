@@ -121,6 +121,20 @@ main .courses table th {
 main .courses table .course-name {
   font-size: 14px;
 }
+main .courses table .course-name > div {
+  display: flex;
+  gap: 12px;
+}
+main .courses table .course-name > div span {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #008000;
+}
+main .courses table .course-name > div span:nth-child(2) {
+  font-size: 12px;
+  color: #1B39A6;
+}
 main .courses table .course-start-date {
   display: none;
 }
@@ -135,6 +149,24 @@ main .courses table .course-start-date {
     display: table-cell;
     padding: 14px;
   }
+}
+main .courses table .btns {
+  display: flex;
+  gap: 8px;
+}
+main .courses table .btns button {
+  padding: 6px 12px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+main .courses table .btns button:nth-child(1) {
+  background-color: #F6F6F6;
+}
+main .courses table .btns button:nth-child(2) {
+  background-color: #F0F6EC;
+  color: #6EA641;
 }
 main .courses table td,
 main .courses table th {
