@@ -111,47 +111,78 @@ main .courses .courses-preview-mode.active {
 main .courses .courses-preview-mode.active svg {
   color: white;
 }
-main .courses table td,
-main .courses table th {
-  display: block;
-  font-size: 12px;
-  font-weight: bold;
-  color: #3f3e43;
-}
-main .courses table .course-name {
-  font-size: 14px;
-}
-main .courses table .course-name > div {
-  display: flex;
-  gap: 12px;
-}
-main .courses table .course-name > div span {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-  color: #008000;
-}
-main .courses table .course-name > div span:nth-child(2) {
-  font-size: 12px;
-  color: #1B39A6;
-}
-main .courses table .course-start-date {
-  display: none;
-}
 @media (min-width: 768px) {
   main .courses table {
     border-spacing: 0 10px;
     border-collapse: separate;
   }
+}
+main .courses table td,
+main .courses table th {
+  display: block;
+  padding: 2px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #3f3e43;
+  border: 1px solid transparent;
+}
+main .courses table td.course-name,
+main .courses table th.course-name {
+  padding-top: 4px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+main .courses table td.course-name > div,
+main .courses table th.course-name > div {
+  order: 1;
+  display: flex;
+  gap: 12px;
+}
+main .courses table td.course-name > div span,
+main .courses table th.course-name > div span {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  color: #008000;
+}
+main .courses table td.course-name > div span:nth-child(2),
+main .courses table th.course-name > div span:nth-child(2) {
+  font-size: 12px;
+  color: #1b39a6;
+}
+main .courses table td.course-name > p,
+main .courses table th.course-name > p {
+  order: 2;
+}
+@media (min-width: 768px) {
+  main .courses table td.course-name > div,
+  main .courses table th.course-name > div {
+    order: 2 !important;
+  }
+  main .courses table td.course-name p,
+  main .courses table th.course-name p {
+    order: 1 !important;
+  }
+}
+main .courses table td.course-start-date,
+main .courses table th.course-start-date {
+  display: none;
+}
+@media (min-width: 768px) {
   main .courses table td,
-  main .courses table .course-start-date,
   main .courses table th {
     display: table-cell;
-    padding: 14px;
+    padding: 14px !important;
+  }
+  main .courses table td.course-start-date,
+  main .courses table th.course-start-date {
+    display: table-cell;
   }
 }
 main .courses table .btns {
   display: flex;
+  align-items: center;
   gap: 8px;
 }
 main .courses table .btns button {
@@ -162,15 +193,11 @@ main .courses table .btns button {
   gap: 8px;
 }
 main .courses table .btns button:nth-child(1) {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 main .courses table .btns button:nth-child(2) {
-  background-color: #F0F6EC;
-  color: #6EA641;
-}
-main .courses table td,
-main .courses table th {
-  border: 1px solid transparent;
+  background-color: #f0f6ec;
+  color: #6ea641;
 }
 main .courses table th {
   font-size: 12px;

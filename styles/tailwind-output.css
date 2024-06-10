@@ -1171,6 +1171,14 @@ video {
     display: flex;
   }
 
+  .md\:table {
+    display: table;
+  }
+
+  .md\:table-cell {
+    display: table-cell;
+  }
+
   .md\:table-row {
     display: table-row;
   }

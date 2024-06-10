@@ -7,7 +7,7 @@
 // ROBOTO font
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap");
 //ROBOTO classes
-.noto{
+.noto {
   font-family: "Noto Sans Arabic", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -124,65 +124,81 @@ main {
       }
     }
     table {
-      td,
-      th {
-        display: block;
-        font-size: 12px;
-        font-weight: bold;
-        color: #3f3e43;
-      }
-      .course-name {
-        font-size: 14px;
-        >div{
-          display: flex;
-          gap: 12px;
-          span{
-            display: flex;
-            align-items: center;
-            gap: 3px;
-            color: #008000;
-          }
-          span:nth-child(2){
-            font-size: 12px;
-            color: #1B39A6;
-          }
-        }
-      }
-      .course-start-date {
-        display: none;
-      }
       @media (min-width: 768px) {
         border-spacing: 0 10px;
         border-collapse: separate;
-        td,
-        .course-start-date,
-        th {
+      }
+      td,
+      th {
+        display: block;
+        padding: 2px;
+        font-size: 12px;
+        font-weight: bold;
+        color: #3f3e43;
+        border: 1px solid transparent;
+        &.course-name {
+          padding-top: 4px;
+          font-size: 14px;
+          display: flex;
+          flex-direction: column;
+          > div {
+            order: 1;
+            display: flex;
+            gap: 12px;
+            span {
+              display: flex;
+              align-items: center;
+              gap: 3px;
+              color: #008000;
+            }
+            span:nth-child(2) {
+              font-size: 12px;
+              color: #1b39a6;
+            }
+          }
+          > p {
+            order: 2;
+          }
+          @media (min-width: 768px) {
+            > div {
+              order: 2 !important;
+            }
+            p {
+              order: 1 !important;
+            }
+          }
+        }
+        &.course-start-date {
+          display: none;
+        }
+        @media (min-width: 768px) {
           display: table-cell;
-          padding: 14px;
+          padding: 14px !important;
+          &.course-start-date {
+            display: table-cell;
+          }
         }
       }
-      .btns{
+
+      .btns {
         display: flex;
+        align-items: center;
         gap: 8px;
-        button{
+        button {
           padding: 6px 12px;
           border-radius: 4px;
           display: flex;
           align-items: center;
           gap: 8px;
         }
-        button:nth-child(1){
-          background-color: #F6F6F6;
+        button:nth-child(1) {
+          background-color: #f6f6f6;
         }
-        button:nth-child(2){
-          background-color: #F0F6EC;
-          color: #6EA641;
+        button:nth-child(2) {
+          background-color: #f0f6ec;
+          color: #6ea641;
         }
       }
-    }
-    table td,
-    table th {
-      border: 1px solid transparent;
     }
     table th {
       font-size: 12px;
@@ -297,7 +313,7 @@ main {
   .articles {
     article {
       padding: 12px;
-      @media (min-width:767px) {
+      @media (min-width: 767px) {
         width: calc(100% / 3);
       }
       .article-wrapper {
@@ -328,35 +344,35 @@ main {
       }
     }
   }
-  .contact{
-    form{
-      .input{
-        .placeholder{
+  .contact {
+    form {
+      .input {
+        .placeholder {
           position: absolute;
           right: 45px;
           top: 50%;
           transform: translateY(-50%);
         }
-        input:not(:placeholder-shown)+.placeholder{
+        input:not(:placeholder-shown) + .placeholder {
           transform: translateY(-100%) !important;
         }
       }
     }
   }
-  footer{
-    .social-links{
-      >svg{
+  footer {
+    .social-links {
+      > svg {
         cursor: pointer;
       }
     }
-    h4{
+    h4 {
       font-size: 18px;
       font-weight: 700;
       margin-bottom: 4px;
     }
-    li{
-        flex-direction: column;
-      
+    li {
+      flex-direction: column;
+
       display: flex;
       gap: 10px;
       font-size: 15px;
