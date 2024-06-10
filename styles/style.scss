@@ -348,12 +348,24 @@ main {
       .input {
         .placeholder {
           position: absolute;
-          right: 45px;
+          right: 48px;
           top: 50%;
           transform: translateY(-50%);
+          transition: .3s;
+          pointer-events: none;
         }
-        input:not(:placeholder-shown) + .placeholder {
-          transform: translateY(-100%) !important;
+        input{
+          flex: 1;
+          color: white;
+        }
+        input:focus::placeholder{
+          display: none;
+        }
+        input:not(:placeholder-shown) + span,
+        input:focus + span
+        {
+          font-size: 10px;
+          transform: translateY(-170%) !important;
         }
       }
     }

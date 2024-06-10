@@ -331,15 +331,30 @@ main .articles article .article-wrapper > div h3 {
 }
 main .contact form .input .placeholder {
   position: absolute;
-  right: 45px;
+  right: 48px;
   top: 50%;
   transform: translateY(-50%);
+  transition: 0.3s;
+  pointer-events: none;
 }
-main .contact form .input input:not(:-moz-placeholder-shown) + .placeholder {
-  transform: translateY(-100%) !important;
+main .contact form .input input {
+  flex: 1;
+  color: white;
 }
-main .contact form .input input:not(:placeholder-shown) + .placeholder {
-  transform: translateY(-100%) !important;
+main .contact form .input input:focus::-moz-placeholder {
+  display: none;
+}
+main .contact form .input input:focus::placeholder {
+  display: none;
+}
+main .contact form .input input:not(:-moz-placeholder-shown) + span {
+  font-size: 10px;
+  transform: translateY(-170%) !important;
+}
+main .contact form .input input:not(:placeholder-shown) + span,
+main .contact form .input input:focus + span {
+  font-size: 10px;
+  transform: translateY(-170%) !important;
 }
 main footer .social-links > svg {
   cursor: pointer;
