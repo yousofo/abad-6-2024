@@ -124,10 +124,8 @@ main {
       }
     }
     table {
-      @media (min-width: 768px) {
-        border-spacing: 0 10px;
-        border-collapse: separate;
-      }
+      border-spacing: 0 10px;
+      border-collapse: separate;
       td,
       th {
         display: block;
@@ -179,7 +177,6 @@ main {
           }
         }
       }
-
       .btns {
         display: flex;
         align-items: center;
@@ -313,6 +310,8 @@ main {
   .articles {
     article {
       padding: 12px;
+      max-width: 320px;
+      margin: 0 auto;
       @media (min-width: 767px) {
         width: calc(100% / 3);
       }

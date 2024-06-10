@@ -1,10 +1,12 @@
 import Swiper from "./swiper-bundle.esm.browser.min.js";
 
 const swiper1 = new Swiper(".swiper1", {
-  loop: true,
   speed: 700,
   slidesPerView: 1,
   spaceBetween: 0,
+  loop: true,
+  autoplay:true,
+  loopAddBlankSlides:true,
   navigation: {
     nextEl: '.swiper1-next',
     prevEl: '.swiper1-prev',
@@ -24,8 +26,8 @@ const swiper2 = new Swiper(".swiper2", {
   loopAddBlankSlides:true,
   breakpoints: {
     768: {
-      loop: false,
-      autoplay:false,
+      // loop: false,
+      // autoplay:false,
       slidesPerView: 5,
     }
   },

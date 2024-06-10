@@ -111,11 +111,9 @@ main .courses .courses-preview-mode.active {
 main .courses .courses-preview-mode.active svg {
   color: white;
 }
-@media (min-width: 768px) {
-  main .courses table {
-    border-spacing: 0 10px;
-    border-collapse: separate;
-  }
+main .courses table {
+  border-spacing: 0 10px;
+  border-collapse: separate;
 }
 main .courses table td,
 main .courses table th {
@@ -297,6 +295,8 @@ main .reviews .swiper1-next {
 }
 main .articles article {
   padding: 12px;
+  max-width: 320px;
+  margin: 0 auto;
 }
 @media (min-width: 767px) {
   main .articles article {
