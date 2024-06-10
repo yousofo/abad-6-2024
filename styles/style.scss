@@ -351,42 +351,67 @@ main {
           right: 48px;
           top: 50%;
           transform: translateY(-50%);
-          transition: .3s;
+          transition: 0.3s;
           pointer-events: none;
         }
-        input{
+        input {
           flex: 1;
           color: white;
         }
-        input:focus::placeholder{
+        input:focus::placeholder {
           display: none;
         }
         input:not(:placeholder-shown) + span,
-        input:focus + span
-        {
+        input:focus + span {
           font-size: 10px;
           transform: translateY(-170%) !important;
         }
       }
     }
   }
-  footer {
-    .social-links {
-      > svg {
-        cursor: pointer;
-      }
+}
+footer {
+  .social-links {
+    > svg {
+      cursor: pointer;
     }
-    h4 {
-      font-size: 18px;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-    li {
-      flex-direction: column;
+  }
+  h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  li {
+    flex-direction: column;
 
-      display: flex;
-      gap: 10px;
-      font-size: 15px;
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+  }
+}
+//
+//
+//courses page
+
+main {
+  .search-filter {
+    button {
+      background-clip: text;
+      color: transparent;
+      background-image: linear-gradient(
+        83.79deg,
+        #1b45b4 3.25%,
+        #1c2792 96.85%
+      );
+    }
+    h3,h4{
+      color: #151318;
+    }
+    label{
+      @extend .noto;
+      color: #8A8394;
+      font-size: 14px;
+      font-weight: 500;
     }
   }
 }

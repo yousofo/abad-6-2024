@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/tailwind-output.css">
+  <!-- dual slider -->
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+
+</head>
+
+<body>
+  <header class="absolute w-full top-0 pt-6">
+    <nav class="font-bold container max-w-screen-xl px-4 flex mx-auto justify-between items-center">
+      <a href="/index.html">
+        <img src="/media/abad-logo.png" alt="" class="min-w-36 max-w-44 w-full">
+      </a>
+      <ul class="hidden max-w-xl w-full justify-between text-white text-sm lg:text-base md:flex px-4">
+        <li>
+          <a href="">الرئيسية</a>
+        </li>
+        <li>
+          <a href="/courses.html">الدورات</a>
+          <ul>
+
+          </ul>
+        </li>
+        <li>
+          <a href="">المقالات</a>
+        </li>
+        <li>
+          <a href="">الاعتمادات والشركاء</a>
+        </li>
+        <li>
+          <a href="">اتصل بنا</a>
+        </li>
+      </ul>
+      <a href="#" class="bg-abad-gold rounded-xl p-2 px-4 hidden md:block">
+        تسجيل الدخول
+      </a>
+      <svg class="md:hidden cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="31" height="28"
+        viewBox="0 0 31 28" fill="none">
+        <rect x="0.318181" y="0.318181" width="29.9091" height="27.3636" rx="4.77272" stroke="white"
+          stroke-width="0.636362" />
+        <path
+          d="M24.1817 21.6363H6.36355C5.66062 21.6363 5.09082 21.0664 5.09082 20.3636C5.09082 19.6607 5.66062 19.0908 6.36355 19.0908H24.1817C24.8846 19.0908 25.4545 19.6607 25.4545 20.3636C25.4544 21.0664 24.8846 21.6363 24.1817 21.6363Z"
+          fill="white" />
+        <path
+          d="M24.1817 15.2727H6.36355C5.66062 15.2727 5.09082 14.7029 5.09082 14C5.09082 13.2971 5.66062 12.7273 6.36355 12.7273H24.1817C24.8846 12.7273 25.4545 13.2971 25.4545 14C25.4545 14.703 24.8846 15.2727 24.1817 15.2727Z"
+          fill="white" />
+        <path
+          d="M24.1817 8.90899H6.36355C5.66062 8.90899 5.09082 8.33919 5.09082 7.63626C5.09082 6.93332 5.66062 6.36353 6.36355 6.36353H24.1817C24.8846 6.36353 25.4545 6.93332 25.4545 7.63626C25.4545 8.33919 24.8846 8.90899 24.1817 8.90899Z"
+          fill="white" />
+      </svg>
+    </nav>
+  </header>
+  <main>
+    <!-- HERO start  -->
+    <section class="hero h-dvh md:h-auto relative">
+      <div
+        class="intro text-center absolute flex flex-col items-center justify-center gap-8 font-bold text-white w-max max-w-full px-4">
+        <h2 class="text-2xl  md:text-3xl lg:text-4xl xl:text-5xl">تعلم بكل سهولة مع <span
+            class="text-abad-gold whitespace-nowrap">اباد للتدريب</span></h2>
+        <h4 class="text-sm md:text-md max-w-xl">معهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية
+          المتخصصة
+          في تقنية
+          المعلومات.
+        </h4>
+        <a href="#" class="bg-abad-gold flex items-center gap-5 rounded-xl p-2 px-4 text-black text-sm md:text-base">
+          <span>ابدأ التعلم</span>
+          <svg class="text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+            fill="none">
+            <path d="M19 12H5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M12 5L5 12L12 19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </a>
+      </div>
+      <div class="back-shape overflow-hidden w-full -z-10 h-full md:h-auto">
+        <img class="w-full h-full md:h-auto object-cover" src="/media/courses/BackgroundHero.png" alt="">
+      </div>
+    </section>
+    <!-- HERO end  -->
+    <!-- ================================================= -->
+    <!-- COURSES start -->
+    <section class="flex container px-4 max-w-screen-xl py-10 mx-auto">
+      <div class="search-filter w-max abad-shadow p-5 flex flex-col gap-4 rounded-lg">
+        <div class="flex items-center justify-between gap-12 pb-3 border-b border-b-[#D8D1E2]">
+          <h3 class="font-bold">تصفية</h3>
+          <button class="text-xs noto font-bold">إعادة تعيين التصفية</button>
+        </div>
+        <div class="flex flex-col gap-[10px]">
+          <h4 class="font-bold text-xs ">الفئة</h4>
+          <div>
+            <input type="checkbox" name="" id="filterAll">
+            <label for="filterAll">الكل</label>
+          </div>
+          <div>
+            <input type="checkbox" name="" id="filterDesign">
+            <label for="filterDesign">التصميم</label>
+          </div>
+          <div>
+            <input type="checkbox" name="" id="filterBusiness">
+            <label for="filterBusiness">الأعمال</label>
+          </div>
+          <div>
+            <input type="checkbox" name="" id="filterProgramming">
+            <label for="filterProgramming">البرمجة</label>
+          </div>
+          <div>
+            <input type="checkbox" name="" id="filterHealth">
+            <label for="filterHealth">الصحة</label>
+          </div>
+          <div>
+            <input type="checkbox" name="" id="filterFinance">
+            <label for="filterFinance">المالية</label>
+          </div>
+          <div>
+            <input type="checkbox" name="" id="filterArt">
+            <label for="filterArt">الفن</label>
+          </div>
+        </div>
+        <div class="max-w-64">
+          <h4 class="font-bold text-xs ">السعر</h4>
+          <p dir="ltr">
+            <!-- <label class="" for="amount">Price range:</label> -->
+            <input type="text" id="amount" readonly="" style="border:0; color:#f6931f; font-weight:bold;">
+          </p>
+
+          <div id="slider-range"></div>
+        </div>
+        <div class="flex flex-col gap-[10px]">
+          <h4 class="font-bold text-xs ">الحضور</h4>
+          <div>
+            <input type="checkbox" name="" id="filterAttendence">
+            <label for="filterAttendence">حضوري</label>
+          </div>
+          <div>
+            <input type="checkbox" name="" id="filterOnline">
+            <label for="filterOnline">اونلاين</label>
+          </div>
+        </div>
+        <div class="flex flex-col gap-[10px]">
+          <h4 class="font-bold text-xs ">شهادات مدعومة</h4>
+          <div>
+            <input type="checkbox" name="" id="filterGoal">
+            <label for="filterGoal">هدف</label>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-1 flex-col items-center gap-8 courses">
+        <!-- courses preview options -->
+        <div class="flex px-6 justify-between items-center w-full">
+          <h4 class="md:text-lg font-bold text-[#9891A3]">عرض : 126 نتيجة</h4>
+          <div class="flex items-center gap-8">
+            <div class="flex items-center">
+              <h4 class="md:text-lg font-bold text-[#9891A3]">ترتيب حسب :</h4>
+              <select class="text-[#151318] font-bold w-auto" name="" id="">
+                <option value="newest">الأحدث</option>
+                <option value="popular">الأشهر</option>
+                <option value="oldest">الأقدم</option>
+              </select>
+            </div>
+            <ul class="flex justify-center items-center gap-2">
+              <li class="courses-preview-mode courses-preview-rows p-2 rounded-lg cursor-pointer">
+                <svg class="  " width="22" height="14" viewBox="0 0 22 14" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9 1H15M9 9H15M9 5H21M9 13H21M3 5C1.89543 5 1 4.10457 1 3C1 1.89543 1.89543 1 3 1C4.10457 1 5 1.89543 5 3C5 4.10457 4.10457 5 3 5ZM3 13C1.89543 13 1 12.1046 1 11C1 9.89543 1.89543 9 3 9C4.10457 9 5 9.89543 5 11C5 12.1046 4.10457 13 3 13Z"
+                    stroke="#0F1416" stroke-width="1.5" stroke-linecap="round" />
+                </svg>
+              </li>
+              <li class="courses-preview-mode courses-preview-cards active p-2 rounded-lg cursor-pointer">
+                <svg class="  " width="22" height="22" viewBox="0 0 22 22" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1 3C1 1.89543 1.89543 1 3 1H7C8.10457 1 9 1.89543 9 3V7C9 8.10457 8.10457 9 7 9H3C1.89543 9 1 8.10457 1 7V3Z"
+                    stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                  <path
+                    d="M13 3C13 1.89543 13.8954 1 15 1H19C20.1046 1 21 1.89543 21 3V7C21 8.10457 20.1046 9 19 9H15C13.8954 9 13 8.10457 13 7V3Z"
+                    stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                  <path
+                    d="M1 15C1 13.8954 1.89543 13 3 13H7C8.10457 13 9 13.8954 9 15V19C9 20.1046 8.10457 21 7 21H3C1.89543 21 1 20.1046 1 19V15Z"
+                    stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                  <path
+                    d="M13 15C13 13.8954 13.8954 13 15 13H19C20.1046 13 21 13.8954 21 15V19C21 20.1046 20.1046 21 19 21H15C13.8954 21 13 20.1046 13 19V15Z"
+                    stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                </svg>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- courses filter -->
+        <nav class="abad-shadow w-fit rounded-full py-3 px-4">
+          <ul class="flex gap-4 font-bold items-center">
+            <li class="active">
+              <button>الكل</button>
+            </li>
+            <li>
+              <button>التصميم</button>
+            </li>
+            <li>
+              <button>البرمجة</button>
+            </li>
+            <li>
+              <button>المالية</button>
+            </li>
+            <li class="hidden md:list-item">
+              <button>الفن</button>
+            </li>
+            <li class="hidden md:list-item">
+              <button>العلوم</button>
+            </li>
+            <li class="hidden md:list-item">
+              <button>البيانات الكبيرة</button>
+            </li>
+          </ul>
+        </nav>
+        <!-- courses table -->
+        <table class="w-full px-3 md:px-6">
+          <tr class="abad-shadow rounded-lg hidden md:table-row">
+            <th class="text-start">اسم الدورة</th>
+            <th class="text-start">تاريخ بداية الدورة</th>
+            <th class="text-start">وقت بداية الدورة</th>
+            <th class="text-start">الاجراءات</th>
+          </tr>
+          <tr class="shadow rounded-lg">
+            <td class="course-name">
+              <p>CCNA 200-301 شهادة سيسكو المعتمدة</p>
+              <div>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
+                      fill="currentColor" />
+                  </svg>
+                  اونلاين
+                </span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
+                      fill="currentColor" />
+                  </svg>
+                  مدعومة من هدف
+                </span>
+              </div>
+            </td>
+            <td class="course-start-date">16 مارس 2024</td>
+            <td>من 06:00 م حتى 10:00 م</td>
+            <td>
+              <div class="btns">
+                <button><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                    <path
+                      d="M10.8866 7.99995C10.8866 9.31995 9.81995 10.3866 8.49995 10.3866C7.17995 10.3866 6.11328 9.31995 6.11328 7.99995C6.11328 6.67995 7.17995 5.61328 8.49995 5.61328C9.81995 5.61328 10.8866 6.67995 10.8866 7.99995Z"
+                      fill="#3F3E43" stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M8.4999 13.5131C10.8532 13.5131 13.0466 12.1264 14.5732 9.7264C15.1732 8.7864 15.1732 7.2064 14.5732 6.2664C13.0466 3.8664 10.8532 2.47974 8.4999 2.47974C6.14656 2.47974 3.95323 3.8664 2.42656 6.2664C1.82656 7.2064 1.82656 8.7864 2.42656 9.7264C3.95323 12.1264 6.14656 13.5131 8.4999 13.5131Z"
+                      stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>التفاصيل</button>
+                <button><svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                    <path
+                      d="M6.66667 7.33333H5.33333C4.23973 7.33292 3.16682 7.63143 2.23058 8.1966C1.29435 8.76178 0.530401 9.57211 0.0213343 10.54C0.00702532 10.3604 -9.15218e-05 10.1802 8.88408e-07 10C8.88408e-07 6.318 2.98467 3.33333 6.66667 3.33333V0L13.3333 5.33333L6.66667 10.6667V7.33333Z"
+                      fill="#71A23F" />
+                  </svg>تسجيل</button>
+              </div>
+            </td>
+          </tr>
+          <tr class="shadow rounded-lg">
+            <td class="course-name">
+              <p>CCNA 200-301 شهادة سيسكو المعتمدة</p>
+              <div>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
+                      fill="currentColor" />
+                  </svg>
+                  اونلاين
+                </span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
+                      fill="currentColor" />
+                  </svg>
+                  مدعومة من هدف
+                </span>
+              </div>
+            </td>
+            <td class="course-start-date">16 مارس 2024</td>
+            <td>من 06:00 م حتى 10:00 م</td>
+            <td>
+              <div class="btns">
+                <button><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                    <path
+                      d="M10.8866 7.99995C10.8866 9.31995 9.81995 10.3866 8.49995 10.3866C7.17995 10.3866 6.11328 9.31995 6.11328 7.99995C6.11328 6.67995 7.17995 5.61328 8.49995 5.61328C9.81995 5.61328 10.8866 6.67995 10.8866 7.99995Z"
+                      fill="#3F3E43" stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M8.4999 13.5131C10.8532 13.5131 13.0466 12.1264 14.5732 9.7264C15.1732 8.7864 15.1732 7.2064 14.5732 6.2664C13.0466 3.8664 10.8532 2.47974 8.4999 2.47974C6.14656 2.47974 3.95323 3.8664 2.42656 6.2664C1.82656 7.2064 1.82656 8.7864 2.42656 9.7264C3.95323 12.1264 6.14656 13.5131 8.4999 13.5131Z"
+                      stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>التفاصيل</button>
+                <button><svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                    <path
+                      d="M6.66667 7.33333H5.33333C4.23973 7.33292 3.16682 7.63143 2.23058 8.1966C1.29435 8.76178 0.530401 9.57211 0.0213343 10.54C0.00702532 10.3604 -9.15218e-05 10.1802 8.88408e-07 10C8.88408e-07 6.318 2.98467 3.33333 6.66667 3.33333V0L13.3333 5.33333L6.66667 10.6667V7.33333Z"
+                      fill="#71A23F" />
+                  </svg>تسجيل</button>
+              </div>
+            </td>
+          </tr>
+          <tr class="shadow rounded-lg">
+            <td class="course-name">
+              <p>CCNA 200-301 شهادة سيسكو المعتمدة</p>
+              <div>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
+                      fill="currentColor" />
+                  </svg>
+                  اونلاين
+                </span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
+                      fill="currentColor" />
+                  </svg>
+                  مدعومة من هدف
+                </span>
+              </div>
+            </td>
+            <td class="course-start-date">16 مارس 2024</td>
+            <td>من 06:00 م حتى 10:00 م</td>
+            <td>
+              <div class="btns">
+                <button><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                    <path
+                      d="M10.8866 7.99995C10.8866 9.31995 9.81995 10.3866 8.49995 10.3866C7.17995 10.3866 6.11328 9.31995 6.11328 7.99995C6.11328 6.67995 7.17995 5.61328 8.49995 5.61328C9.81995 5.61328 10.8866 6.67995 10.8866 7.99995Z"
+                      fill="#3F3E43" stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M8.4999 13.5131C10.8532 13.5131 13.0466 12.1264 14.5732 9.7264C15.1732 8.7864 15.1732 7.2064 14.5732 6.2664C13.0466 3.8664 10.8532 2.47974 8.4999 2.47974C6.14656 2.47974 3.95323 3.8664 2.42656 6.2664C1.82656 7.2064 1.82656 8.7864 2.42656 9.7264C3.95323 12.1264 6.14656 13.5131 8.4999 13.5131Z"
+                      stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>التفاصيل</button>
+                <button><svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                    <path
+                      d="M6.66667 7.33333H5.33333C4.23973 7.33292 3.16682 7.63143 2.23058 8.1966C1.29435 8.76178 0.530401 9.57211 0.0213343 10.54C0.00702532 10.3604 -9.15218e-05 10.1802 8.88408e-07 10C8.88408e-07 6.318 2.98467 3.33333 6.66667 3.33333V0L13.3333 5.33333L6.66667 10.6667V7.33333Z"
+                      fill="#71A23F" />
+                  </svg>تسجيل</button>
+              </div>
+            </td>
+          </tr>
+          <tr class="shadow rounded-lg">
+            <td class="course-name">
+              <p>CCNA 200-301 شهادة سيسكو المعتمدة</p>
+              <div>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
+                      fill="currentColor" />
+                  </svg>
+                  اونلاين
+                </span>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                    <path
+                      d="M6 12C9.31371 12 12 9.31371 12 6C12 2.68629 9.31371 0 6 0C2.68629 0 0 2.68629 0 6C0 9.31371 2.68629 12 6 12Z"
+                      fill="currentColor" />
+                  </svg>
+                  مدعومة من هدف
+                </span>
+              </div>
+            </td>
+            <td class="course-start-date">16 مارس 2024</td>
+            <td>من 06:00 م حتى 10:00 م</td>
+            <td>
+              <div class="btns">
+                <button><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                    <path
+                      d="M10.8866 7.99995C10.8866 9.31995 9.81995 10.3866 8.49995 10.3866C7.17995 10.3866 6.11328 9.31995 6.11328 7.99995C6.11328 6.67995 7.17995 5.61328 8.49995 5.61328C9.81995 5.61328 10.8866 6.67995 10.8866 7.99995Z"
+                      fill="#3F3E43" stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <path
+                      d="M8.4999 13.5131C10.8532 13.5131 13.0466 12.1264 14.5732 9.7264C15.1732 8.7864 15.1732 7.2064 14.5732 6.2664C13.0466 3.8664 10.8532 2.47974 8.4999 2.47974C6.14656 2.47974 3.95323 3.8664 2.42656 6.2664C1.82656 7.2064 1.82656 8.7864 2.42656 9.7264C3.95323 12.1264 6.14656 13.5131 8.4999 13.5131Z"
+                      stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>التفاصيل</button>
+                <button><svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                    <path
+                      d="M6.66667 7.33333H5.33333C4.23973 7.33292 3.16682 7.63143 2.23058 8.1966C1.29435 8.76178 0.530401 9.57211 0.0213343 10.54C0.00702532 10.3604 -9.15218e-05 10.1802 8.88408e-07 10C8.88408e-07 6.318 2.98467 3.33333 6.66667 3.33333V0L13.3333 5.33333L6.66667 10.6667V7.33333Z"
+                      fill="#71A23F" />
+                  </svg>تسجيل</button>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <!-- COURSES end -->
+    <!-- ================================================= -->
+  </main>
+  <!-- ================================================= -->
+  <!-- FOOTER start -->
+  <footer class="bg-[#303030] p-10">
+    <ul
+      class="container text-white flex-col gap-4 md:gap-0 flex md:flex-row justify-between items-start max-w-screen-lg mx-auto">
+      <li class="max-w-[370px]">
+        <img src="/media/ft-logo 3 (1).png" class="w-fit" alt="">
+        <p class="noto my-3">ومعهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية
+          المعلومات. معهد
+          شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية المعلومات. </p>
+        <div class="social-links flex gap-5">
+          <svg class="linkedin" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+            fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M6.07479 6.10013H9.11421V7.56472C9.55204 6.72238 10.6748 5.96555 12.3615 5.96555C15.5949 5.96555 16.3625 7.6423 16.3625 10.7187V16.4163H13.089V11.4193C13.089 9.66738 12.6512 8.67938 11.5366 8.67938C9.99069 8.67938 9.34827 9.74417 9.34827 11.4185V16.4163H6.07479V6.10013ZM0.461588 16.2818H3.73507V5.96555H0.461588V16.2818ZM4.20399 2.60176C4.20411 2.86718 4.1497 3.12999 4.04391 3.37489C3.93812 3.61979 3.78307 3.84191 3.58776 4.02834C3.192 4.40884 2.6563 4.62182 2.09833 4.62051C1.54134 4.62015 1.00688 4.40771 0.610531 4.02913C0.415932 3.84207 0.261403 3.6197 0.155799 3.37477C0.0501947 3.12983 -0.00440887 2.86714 -0.00488281 2.60176C-0.00488281 2.0658 0.216077 1.5528 0.61135 1.17438C1.00735 0.7953 1.54203 0.582771 2.09915 0.583008C2.65727 0.583008 3.19249 0.795966 3.58776 1.17438C3.98222 1.5528 4.20399 2.0658 4.20399 2.60176Z"
+              fill="#007BB6" />
+          </svg>
+          <svg class="pinterest" xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17"
+            fill="none">
+            <path
+              d="M7.1002 0.900391C2.77921 0.900391 0.520508 3.56039 0.520508 6.50539C0.520508 7.93039 1.30614 9.35539 2.5828 10.1154C2.97562 10.3054 2.87741 10.1154 3.17203 8.97539C3.17203 8.88039 3.17203 8.78539 3.07382 8.69039C1.30614 6.60039 2.77921 2.51539 6.90379 2.51539C12.8943 2.51539 11.7158 10.4954 7.98404 10.4954C7.19841 10.5904 6.51098 10.0204 6.51098 9.26039V8.88039C6.90379 7.83539 7.19841 6.88539 7.29661 5.84039C7.29661 3.84539 4.25227 4.13039 4.25227 6.79039C4.25227 7.26539 4.35048 7.74039 4.54689 8.12039C4.54689 8.12039 3.56484 12.0154 3.36844 12.6804C3.17203 13.8204 3.27023 14.9604 3.46664 16.0054C3.36844 16.1004 3.46664 16.1004 3.46664 16.1004H3.56484C4.25227 15.1504 4.8415 14.2004 5.23432 13.1554C5.33252 12.6804 5.82354 10.9704 5.82354 10.9704C6.31457 11.6354 7.19841 12.0154 8.08225 12.0154C11.1266 12.0154 13.2871 9.45039 13.2871 6.31539C13.2871 3.18039 10.5374 0.900391 7.1002 0.900391Z"
+              fill="#CB2056" />
+          </svg>
+          <svg class="google" xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
+            <path
+              d="M11.6464 5.77241C11.7026 6.1021 11.7428 6.43179 11.7428 6.85945C11.7428 10.5929 9.48397 13.2393 6.08367 13.2393C2.82807 13.2393 0.191406 10.3167 0.191406 6.70801C0.191406 3.09932 2.82807 0.176758 6.08367 0.176758C7.67532 0.176758 9.00166 0.818283 10.0306 1.88754L8.43091 3.5894C7.99681 3.12606 7.23318 2.58254 6.08367 2.58254C4.07404 2.58254 2.43415 4.42697 2.43415 6.70801C2.43415 8.98905 4.07404 10.8335 6.08367 10.8335C8.41483 10.8335 9.29106 8.97122 9.42768 8.0178H6.08367V5.77237H11.6464V5.77241ZM17.3363 5.99137V4.09551H15.6177V5.99137H13.9073V7.89635H15.6177V9.79222H17.3363V7.89635H19.0466V5.99137H17.3363Z"
+              fill="#F04D3F" />
+          </svg>
+          <svg class="facebook" xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+            <path
+              d="M5.47904 14.6229V8.13438H7.74183L8.07818 5.59392H5.47904V3.97576C5.47904 3.24267 5.69018 2.74076 6.77779 2.74076H8.15593V0.475798C7.48538 0.406282 6.81138 0.372717 6.13701 0.375256C4.13691 0.375256 2.76369 1.55642 2.76369 3.7248V5.58917H0.515625V8.12963H2.7686V14.6229H5.47904Z"
+              fill="#3F7BF8" />
+          </svg>
+          <svg class="twitter" xmlns="http://www.w3.org/2000/svg" width="19" height="15" viewBox="0 0 19 15"
+            fill="none">
+            <path
+              d="M18.5819 1.90915C17.8986 2.20207 17.1645 2.39998 16.3928 2.48944C17.189 2.02853 17.7848 1.3031 18.0688 0.448525C17.3207 0.878392 16.5019 1.18097 15.6481 1.34311C15.0739 0.750043 14.3133 0.35695 13.4845 0.224859C12.6558 0.0927673 11.8051 0.229068 11.0646 0.6126C10.324 0.996132 9.73514 1.60544 9.38928 2.34592C9.04342 3.08639 8.95995 3.91662 9.15183 4.70769C7.63595 4.63406 6.15302 4.25292 4.79927 3.58899C3.44552 2.92506 2.25121 1.99319 1.29384 0.853858C0.966495 1.40011 0.77827 2.03344 0.77827 2.70794C0.777905 3.31515 0.932477 3.91305 1.22827 4.4486C1.52407 4.98416 1.95194 5.4408 2.47393 5.77802C1.86856 5.75939 1.27655 5.60115 0.747172 5.31648V5.36398C0.747111 6.21561 1.05163 7.04103 1.60906 7.70019C2.1665 8.35934 2.94251 8.81164 3.80542 8.98032C3.24384 9.12734 2.65507 9.149 2.08357 9.04365C2.32703 9.77643 2.80128 10.4172 3.43991 10.8763C4.07854 11.3354 4.84959 11.5898 5.64512 11.6039C4.29467 12.6294 2.62687 13.1857 0.910027 13.1833C0.605906 13.1834 0.302041 13.1662 0 13.1318C1.7427 14.2157 3.77133 14.791 5.84316 14.7888C12.8566 14.7888 16.6907 9.16952 16.6907 4.29602C16.6907 4.13769 16.6866 3.97777 16.6792 3.81944C17.425 3.29771 18.0687 2.65165 18.5803 1.91153L18.5819 1.90915Z"
+              fill="#10ADED" />
+          </svg>
+        </div>
+      </li>
+      <li>
+        <h4>الصفحات</h4>
+        <a href="#">الصفحة الرئيسية</a>
+        <a href="#">حول</a>
+        <a href="#">المدونة</a>
+        <a href="#">منشور المدونة</a>
+        <a href="#">فريق أباد</a>
+      </li>
+      <li>
+        <h4>نظرة عامة</h4>
+        <a href="#">جهة الاتصال</a>
+        <a href="#">قصة العميل </a>
+        <a href="#">تسجيل الدخول</a>
+        <a href="#">التسجيل</a>
+        <a href="#">دليل النمط</a>
+      </li>
+      <li>
+        <h4>يتصل:</h4>
+        <a href="tel:001 234 567 89">+001 234 567 89</a>
+        <a href="mailto:hello@nesa.com">hello@nesa.com</a>
+      </li>
+    </ul>
+
+  </footer>
+  <!-- FOOTER end -->
+  <!-- <script type="module" src="/js/jquery-3.7.1.min.js"></script> -->
+  <script type="module" src="/js/app.js"></script>
+</body>
+
+</html>
