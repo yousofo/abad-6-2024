@@ -33,15 +33,14 @@ const swiper2 = new Swiper(".swiper2", {
   },
 });
 window.onload = function () {
-  $("#slider-range").slider({
-    range: true,
-    min: 0,
-    max: 500,
-    values: [75, 300],
-    slide: function (event, ui) {
-      $("#amount").val("ريال سعودي" + ui.values[0] + " - ريال سعودي" + ui.values[1]);
-    }
-  });
-  $("#amount").val("$" + $("#slider-range").slider("values", 0) +
-    " - $" + $("#slider-range").slider("values", 1));
+  //
+  document.onclick = () => $(".nav-list").hide()
+  $(".toggle-nav-list").on("click", (e) => {
+    e.stopPropagation()
+    $(".nav-list").on("click", (e) => e.stopPropagation())
+    console.log(e.isDefaultPrevented())
+
+    $(".nav-list").toggle()
+    console.log("hi")
+  })
 };

@@ -20,11 +20,12 @@
       <a href="/index.html">
         <img src="/media/abad-logo.png" alt="" class="min-w-36 max-w-44 w-full">
       </a>
-      <ul class="hidden max-w-xl w-full justify-between text-white text-sm lg:text-base md:flex px-4">
+      <ul
+        class="nav-list hidden absolute md:static md:flex flex-col md:flex-row bg-white md:bg-transparent p-4 md:p-0 max-w-xl w-full justify-between items-center md:text-white text-sm lg:text-base  px-4">
         <li>
           <a href="">الرئيسية</a>
         </li>
-        <li>
+        <li class="text-abad-gold border-abad-gold border p-1">
           <a href="/courses.html">الدورات</a>
           <ul>
 
@@ -43,7 +44,7 @@
       <a href="#" class="bg-abad-gold rounded-xl p-2 px-4 hidden md:block">
         تسجيل الدخول
       </a>
-      <svg class="md:hidden cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="31" height="28"
+      <svg class="md:hidden toggle-nav-list cursor-pointer min-w-8" xmlns="http://www.w3.org/2000/svg" width="33"
         viewBox="0 0 31 28" fill="none">
         <rect x="0.318181" y="0.318181" width="29.9091" height="27.3636" rx="4.77272" stroke="white"
           stroke-width="0.636362" />
@@ -61,7 +62,7 @@
   </header>
   <main>
     <!-- HERO start  -->
-    <section class="hero h-dvh md:h-auto relative">
+    <section class="hero h-dvh lg:h-auto relative">
       <div
         class="intro text-center absolute flex flex-col items-center justify-center gap-8 font-bold text-white w-max max-w-full px-4">
         <h2 class="text-2xl  md:text-3xl lg:text-4xl xl:text-5xl">تعلم بكل سهولة مع <span
@@ -80,119 +81,121 @@
           </svg>
         </a>
       </div>
-      <div class="back-shape overflow-hidden w-full -z-10 h-full md:h-auto">
-        <img class="w-full h-full md:h-auto object-cover" src="/media/courses/BackgroundHero.png" alt="">
+      <div class="back-shape overflow-hidden w-full -z-10 h-full lg:h-auto">
+        <img class="w-full h-full object-cover" src="/media/courses/BackgroundHero.png" alt="">
       </div>
     </section>
     <!-- HERO end  -->
     <!-- ================================================= -->
     <!-- COURSES start -->
-    <section class="flex container px-4 max-w-screen-xl py-10 mx-auto">
-      <div class="search-filter w-max abad-shadow p-5 flex flex-col gap-4 rounded-lg">
+    <section class="flex flex-col gap-8 lg:gap-0 lg:flex-row container px-4 max-w-screen-xl -mt-12 sm:-mt-0 md:py-10 mx-auto">
+      <form class="search-filter w-full lg:w-max mx-auto abad-shadow p-5 flex flex-col gap-4 rounded-lg">
         <div class="flex items-center justify-between gap-12 pb-3 border-b border-b-[#D8D1E2]">
           <h3 class="font-bold">تصفية</h3>
-          <button class="text-xs noto font-bold">إعادة تعيين التصفية</button>
+          <button type="reset" class="text-xs noto font-bold">إعادة تعيين التصفية</button>
         </div>
-        <div class="flex flex-col gap-[10px]">
-          <h4 class="font-bold text-xs ">الفئة</h4>
-          <div>
-            <input type="checkbox" name="" id="filterAll">
-            <label for="filterAll">الكل</label>
+        <div class="flex flex-col md:flex-row gap-4 md:gap-24 lg:gap-4 lg:flex-col ">
+          <div class="flex flex-col gap-[10px]">
+            <h4 class="font-bold text-xs ">الفئة</h4>
+            <div>
+              <input type="checkbox" name="" id="filterAll">
+              <label for="filterAll">الكل</label>
+            </div>
+            <div>
+              <input type="checkbox" name="" id="filterDesign">
+              <label for="filterDesign">التصميم</label>
+            </div>
+            <div>
+              <input type="checkbox" name="" id="filterBusiness">
+              <label for="filterBusiness">الأعمال</label>
+            </div>
+            <div>
+              <input type="checkbox" name="" id="filterProgramming">
+              <label for="filterProgramming">البرمجة</label>
+            </div>
+            <div>
+              <input type="checkbox" name="" id="filterHealth">
+              <label for="filterHealth">الصحة</label>
+            </div>
+            <div>
+              <input type="checkbox" name="" id="filterFinance">
+              <label for="filterFinance">المالية</label>
+            </div>
+            <div>
+              <input type="checkbox" name="" id="filterArt">
+              <label for="filterArt">الفن</label>
+            </div>
           </div>
-          <div>
-            <input type="checkbox" name="" id="filterDesign">
-            <label for="filterDesign">التصميم</label>
-          </div>
-          <div>
-            <input type="checkbox" name="" id="filterBusiness">
-            <label for="filterBusiness">الأعمال</label>
-          </div>
-          <div>
-            <input type="checkbox" name="" id="filterProgramming">
-            <label for="filterProgramming">البرمجة</label>
-          </div>
-          <div>
-            <input type="checkbox" name="" id="filterHealth">
-            <label for="filterHealth">الصحة</label>
-          </div>
-          <div>
-            <input type="checkbox" name="" id="filterFinance">
-            <label for="filterFinance">المالية</label>
-          </div>
-          <div>
-            <input type="checkbox" name="" id="filterArt">
-            <label for="filterArt">الفن</label>
+          <div class="flex flex-col gap-4">
+            <div class="max-w-64">
+              <h4 class="font-bold text-xs">السعر</h4>
+              <p dir="rtl">
+                <!-- <label class="" for="amount">Price range:</label> -->
+                <input type="text" id="amount" value="ريال سعودي75 - ريال سعودي300" readonly="" class="text-xs w-max min-w-60" style="border:0; color:#f6931f; font-weight:bold;">
+              </p>
+              <div id="slider-range"></div>
+            </div>
+            <div class="flex flex-col gap-[10px]">
+              <h4 class="font-bold text-xs ">الحضور</h4>
+              <div>
+                <input type="checkbox" name="" id="filterAttendence">
+                <label for="filterAttendence">حضوري</label>
+              </div>
+              <div>
+                <input type="checkbox" name="" id="filterOnline">
+                <label for="filterOnline">اونلاين</label>
+              </div>
+            </div>
+            <div class="flex flex-col gap-[10px]">
+              <h4 class="font-bold text-xs ">شهادات مدعومة</h4>
+              <div>
+                <input type="checkbox" name="" id="filterGoal">
+                <label for="filterGoal">هدف</label>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="max-w-64">
-          <h4 class="font-bold text-xs ">السعر</h4>
-          <p dir="ltr">
-            <!-- <label class="" for="amount">Price range:</label> -->
-            <input type="text" id="amount" readonly="" style="border:0; color:#f6931f; font-weight:bold;">
-          </p>
-
-          <div id="slider-range"></div>
-        </div>
-        <div class="flex flex-col gap-[10px]">
-          <h4 class="font-bold text-xs ">الحضور</h4>
-          <div>
-            <input type="checkbox" name="" id="filterAttendence">
-            <label for="filterAttendence">حضوري</label>
-          </div>
-          <div>
-            <input type="checkbox" name="" id="filterOnline">
-            <label for="filterOnline">اونلاين</label>
-          </div>
-        </div>
-        <div class="flex flex-col gap-[10px]">
-          <h4 class="font-bold text-xs ">شهادات مدعومة</h4>
-          <div>
-            <input type="checkbox" name="" id="filterGoal">
-            <label for="filterGoal">هدف</label>
-          </div>
-        </div>
-      </div>
+      </form>
       <div class="flex flex-1 flex-col items-center gap-8 courses">
         <!-- courses preview options -->
-        <div class="flex px-6 justify-between items-center w-full">
-          <h4 class="md:text-lg font-bold text-[#9891A3]">عرض : 126 نتيجة</h4>
-          <div class="flex items-center gap-8">
+        <div class="flex px-6 items-center w-full gap-8">
+          <div class="flex flex-col md:flex-row flex-1 justify-between lg:items-center">
+            <h4 class="md:text-lg font-bold text-[#9891A3]">عرض : 126 نتيجة</h4>
             <div class="flex items-center">
-              <h4 class="md:text-lg font-bold text-[#9891A3]">ترتيب حسب :</h4>
-              <select class="text-[#151318] font-bold w-auto" name="" id="">
+              <h4 class="text-xs md:text-lg font-bold text-[#9891A3]">ترتيب حسب :</h4>
+              <select class="text-[#151318] text-xs md:text-base font-bold w-auto" name="" id="">
                 <option value="newest">الأحدث</option>
                 <option value="popular">الأشهر</option>
                 <option value="oldest">الأقدم</option>
               </select>
             </div>
-            <ul class="flex justify-center items-center gap-2">
-              <li class="courses-preview-mode courses-preview-rows p-2 rounded-lg cursor-pointer">
-                <svg class="  " width="22" height="14" viewBox="0 0 22 14" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M9 1H15M9 9H15M9 5H21M9 13H21M3 5C1.89543 5 1 4.10457 1 3C1 1.89543 1.89543 1 3 1C4.10457 1 5 1.89543 5 3C5 4.10457 4.10457 5 3 5ZM3 13C1.89543 13 1 12.1046 1 11C1 9.89543 1.89543 9 3 9C4.10457 9 5 9.89543 5 11C5 12.1046 4.10457 13 3 13Z"
-                    stroke="#0F1416" stroke-width="1.5" stroke-linecap="round" />
-                </svg>
-              </li>
-              <li class="courses-preview-mode courses-preview-cards active p-2 rounded-lg cursor-pointer">
-                <svg class="  " width="22" height="22" viewBox="0 0 22 22" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1 3C1 1.89543 1.89543 1 3 1H7C8.10457 1 9 1.89543 9 3V7C9 8.10457 8.10457 9 7 9H3C1.89543 9 1 8.10457 1 7V3Z"
-                    stroke="white" stroke-width="1.5" stroke-linejoin="round" />
-                  <path
-                    d="M13 3C13 1.89543 13.8954 1 15 1H19C20.1046 1 21 1.89543 21 3V7C21 8.10457 20.1046 9 19 9H15C13.8954 9 13 8.10457 13 7V3Z"
-                    stroke="white" stroke-width="1.5" stroke-linejoin="round" />
-                  <path
-                    d="M1 15C1 13.8954 1.89543 13 3 13H7C8.10457 13 9 13.8954 9 15V19C9 20.1046 8.10457 21 7 21H3C1.89543 21 1 20.1046 1 19V15Z"
-                    stroke="white" stroke-width="1.5" stroke-linejoin="round" />
-                  <path
-                    d="M13 15C13 13.8954 13.8954 13 15 13H19C20.1046 13 21 13.8954 21 15V19C21 20.1046 20.1046 21 19 21H15C13.8954 21 13 20.1046 13 19V15Z"
-                    stroke="white" stroke-width="1.5" stroke-linejoin="round" />
-                </svg>
-              </li>
-            </ul>
           </div>
+
+          <ul class="flex justify-center items-center gap-2">
+            <li class="courses-preview-mode courses-preview-rows p-2 rounded-lg cursor-pointer">
+              <svg class="  " width="22" height="14" viewBox="0 0 22 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M9 1H15M9 9H15M9 5H21M9 13H21M3 5C1.89543 5 1 4.10457 1 3C1 1.89543 1.89543 1 3 1C4.10457 1 5 1.89543 5 3C5 4.10457 4.10457 5 3 5ZM3 13C1.89543 13 1 12.1046 1 11C1 9.89543 1.89543 9 3 9C4.10457 9 5 9.89543 5 11C5 12.1046 4.10457 13 3 13Z"
+                  stroke="#0F1416" stroke-width="1.5" stroke-linecap="round" />
+              </svg>
+            </li>
+            <li class="courses-preview-mode courses-preview-cards active p-2 rounded-lg cursor-pointer">
+              <svg class="  " width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1 3C1 1.89543 1.89543 1 3 1H7C8.10457 1 9 1.89543 9 3V7C9 8.10457 8.10457 9 7 9H3C1.89543 9 1 8.10457 1 7V3Z"
+                  stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                <path
+                  d="M13 3C13 1.89543 13.8954 1 15 1H19C20.1046 1 21 1.89543 21 3V7C21 8.10457 20.1046 9 19 9H15C13.8954 9 13 8.10457 13 7V3Z"
+                  stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                <path
+                  d="M1 15C1 13.8954 1.89543 13 3 13H7C8.10457 13 9 13.8954 9 15V19C9 20.1046 8.10457 21 7 21H3C1.89543 21 1 20.1046 1 19V15Z"
+                  stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+                <path
+                  d="M13 15C13 13.8954 13.8954 13 15 13H19C20.1046 13 21 13.8954 21 15V19C21 20.1046 20.1046 21 19 21H15C13.8954 21 13 20.1046 13 19V15Z"
+                  stroke="white" stroke-width="1.5" stroke-linejoin="round" />
+              </svg>
+            </li>
+          </ul>
         </div>
         <!-- courses filter -->
         <nav class="abad-shadow w-fit rounded-full py-3 px-4">

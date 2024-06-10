@@ -385,4 +385,9 @@ main .search-filter label {
   color: #8A8394;
   font-size: 14px;
   font-weight: 500;
+}
+
+header .nav-list {
+  top: 100%;
+  left: 0;
 }/*# sourceMappingURL=style.css.map */
