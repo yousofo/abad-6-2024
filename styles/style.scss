@@ -286,13 +286,16 @@ main {
     nav {
       li {
         padding: 4px 6px;
+        transition: .3s;
         button {
           display: flex;
           align-items: center;
           gap: 3px;
-          svg {
-            width: 17px;
-            height: 17px;
+          div{
+            svg {
+              width: 17px;
+              height: 17px;
+            }
           }
         }
         @media (min-width: 768px) {
@@ -309,6 +312,11 @@ main {
         border-radius: 20px;
         color: #9891a3;
         &.active {
+          button{
+            div{
+              background-color: transparent;
+            }
+          }
           color: white;
           background-color: $abad-gold;
         }
@@ -392,6 +400,10 @@ main {
             justify-content: space-between;
             font-weight: bold;
             p:nth-child(1) {
+              //#5BB6D21A
+              background-color: #5BB6D21A;
+              border-radius: 4px;
+              padding: 8px;
               color: #1b45b4;
             }
             p:nth-child(2) {

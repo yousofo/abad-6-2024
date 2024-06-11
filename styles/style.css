@@ -322,6 +322,7 @@ main .courses table td {
 }
 main .courses nav li {
   padding: 4px 6px;
+  transition: 0.3s;
   border-radius: 20px;
   color: #9891a3;
 }
@@ -330,7 +331,7 @@ main .courses nav li button {
   align-items: center;
   gap: 3px;
 }
-main .courses nav li button svg {
+main .courses nav li button div svg {
   width: 17px;
   height: 17px;
 }
@@ -349,6 +350,9 @@ main .courses nav li button svg {
 main .courses nav li.active {
   color: white;
   background-color: #fdb614;
+}
+main .courses nav li.active button div {
+  background-color: transparent;
 }
 main .courses > .show-all {
   background: linear-gradient(to right, #1b45b4, #1c2792);
@@ -405,6 +409,9 @@ main .courses .courses-cards figure figcaption .course-info {
   font-weight: bold;
 }
 main .courses .courses-cards figure figcaption .course-info p:nth-child(1) {
+  background-color: rgba(91, 182, 210, 0.1019607843);
+  border-radius: 4px;
+  padding: 8px;
   color: #1b45b4;
 }
 main .courses .courses-cards figure figcaption .course-info p:nth-child(2) {
