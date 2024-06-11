@@ -155,11 +155,11 @@ header {
     a {
       white-space: nowrap;
     }
-    .nav-list-drop{
+    .nav-list-drop {
       border-radius: 20px;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
-      li{
+      li {
         margin: 20px 0;
       }
     }
@@ -173,11 +173,14 @@ main {
       top: 50%;
       transform: translate(-50%, -50%);
     }
-  }  
+  }
 
   .courses {
     .courses-preview-mode {
       color: #0f1416;
+      svg {
+        color: #0f1416;
+      }
       &.active {
         background: linear-gradient(#1b45b4 100%, #1c2792 100%);
         svg {
@@ -244,7 +247,8 @@ main {
           }
         }
       }
-      td:nth-child(3),td:nth-child(2) {
+      td:nth-child(3),
+      td:nth-child(2) {
         font-size: 12px;
         font-weight: 400;
         @media (min-width: 768px) {
@@ -312,6 +316,89 @@ main {
     }
     > .show-all {
       background: linear-gradient(to right, #1b45b4, #1c2792);
+    }
+    /*
+    <figure class="">
+      <div class="img">
+        <img src="/media/abad-course-card.png" alt="">
+      </div>
+      <figcaption>
+        <h4>CCNA 200-301 شهادة سيسكو المعتمدة</h4>
+        <div class="course-date">
+          <div>
+            <img src="/media/calendar.png" alt="">
+            <p>16 مارس 2024</p>
+          </div>
+          <div>
+            <img src="/media/combo sape.png" alt="">
+            <p>من 6 م : الي 9 م</p>
+          </div>
+        </div>
+        <p>هنا يكتب تفاصيل المحتوي للدورة  هنا يكتب تفاصيل المحتوي للدورة  هنا يكتب تفاصيل المحتوي للدورة</p>
+        <div class="course-info">
+          <p>البرمجة</p>
+          <p>1500 ريال سعودي</p>
+        </div>
+      </figcaption>
+    </figure>
+    */
+    .courses-cards {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(auto-fill, minmax(250px,350px));
+      justify-content: center;
+      gap: 32px;
+      figure {
+        padding: 24px;
+        box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.05);
+        width: 100%;
+        .img {
+          img {
+            width: 100%;
+            max-width: 300px;
+          }
+        }
+        figcaption {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          h4 {
+            color: #3F3E43;
+            font-size: 14px;
+            font-weight: 500;
+          }
+          .course-date {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            font-weight: 400;
+            color: #3F3E43;
+            div {
+              display: flex;
+              align-items: center;
+              gap: 8px;
+            }
+          }
+          > p {
+            font-size: 12px;
+            font-weight: 400;
+            max-width: 284px;
+            color: #8A8394;
+          }
+          .course-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-weight: bold;
+            p:nth-child(1) {
+              color: #1b45b4;
+            }
+            p:nth-child(2) {
+              color: $abad-gold;
+            }
+          }
+        }
+      }
     }
   }
   .plan {
@@ -473,7 +560,7 @@ footer {
   }
   h4 {
     font-size: 16px;
-    @media (min-width:768px) {
+    @media (min-width: 768px) {
       font-size: 18px;
     }
     font-weight: 700;

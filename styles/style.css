@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap");
 * {
   padding: 0;
@@ -165,7 +166,37 @@ main .hero .intro {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+main .courses {
+  /*
+  <figure class="">
+    <div class="img">
+      <img src="/media/abad-course-card.png" alt="">
+    </div>
+    <figcaption>
+      <h4>CCNA 200-301 شهادة سيسكو المعتمدة</h4>
+      <div class="course-date">
+        <div>
+          <img src="/media/calendar.png" alt="">
+          <p>16 مارس 2024</p>
+        </div>
+        <div>
+          <img src="/media/combo sape.png" alt="">
+          <p>من 6 م : الي 9 م</p>
+        </div>
+      </div>
+      <p>هنا يكتب تفاصيل المحتوي للدورة  هنا يكتب تفاصيل المحتوي للدورة  هنا يكتب تفاصيل المحتوي للدورة</p>
+      <div class="course-info">
+        <p>البرمجة</p>
+        <p>1500 ريال سعودي</p>
+      </div>
+    </figcaption>
+  </figure>
+  */
+}
 main .courses .courses-preview-mode {
+  color: #0f1416;
+}
+main .courses .courses-preview-mode svg {
   color: #0f1416;
 }
 main .courses .courses-preview-mode.active {
@@ -249,12 +280,14 @@ main .courses table th.course-start-date {
     display: table-cell;
   }
 }
-main .courses table td:nth-child(3), main .courses table td:nth-child(2) {
+main .courses table td:nth-child(3),
+main .courses table td:nth-child(2) {
   font-size: 12px;
   font-weight: 400;
 }
 @media (min-width: 768px) {
-  main .courses table td:nth-child(3), main .courses table td:nth-child(2) {
+  main .courses table td:nth-child(3),
+  main .courses table td:nth-child(2) {
     font-weight: 500;
   }
 }
@@ -319,6 +352,62 @@ main .courses nav li.active {
 }
 main .courses > .show-all {
   background: linear-gradient(to right, #1b45b4, #1c2792);
+}
+main .courses .courses-cards {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
+  justify-content: center;
+  gap: 32px;
+}
+main .courses .courses-cards figure {
+  padding: 24px;
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.05);
+  width: 100%;
+}
+main .courses .courses-cards figure .img img {
+  width: 100%;
+  max-width: 300px;
+}
+main .courses .courses-cards figure figcaption {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+main .courses .courses-cards figure figcaption h4 {
+  color: #3F3E43;
+  font-size: 14px;
+  font-weight: 500;
+}
+main .courses .courses-cards figure figcaption .course-date {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 400;
+  color: #3F3E43;
+}
+main .courses .courses-cards figure figcaption .course-date div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+main .courses .courses-cards figure figcaption > p {
+  font-size: 12px;
+  font-weight: 400;
+  max-width: 284px;
+  color: #8A8394;
+}
+main .courses .courses-cards figure figcaption .course-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+}
+main .courses .courses-cards figure figcaption .course-info p:nth-child(1) {
+  color: #1b45b4;
+}
+main .courses .courses-cards figure figcaption .course-info p:nth-child(2) {
+  color: #fdb614;
 }
 main .plan .cards .card {
   display: flex;

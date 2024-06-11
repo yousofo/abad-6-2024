@@ -44,4 +44,18 @@ window.onload = function () {
     $(".nav-list").toggle(300)
     console.log("hi")
   })
+
+  //toggle courses preview mode
+  $(".courses-preview-mode").on("click",()=>{
+    $(".courses-preview-mode").toggleClass("active")
+    console.log($(".courses-preview-mode.active").data("mode"))
+    if($(".courses-preview-mode.active").data("mode")=="cards"){
+      console.log("cards")
+      $(".courses-rows").hide(0)
+      $(".courses-cards").show(300)
+    }else{
+      $(".courses-cards").hide(0)
+      $(".courses-rows").show(300)
+    }
+  })
 };
