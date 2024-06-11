@@ -431,7 +431,7 @@ main .articles article .article-wrapper > div:nth-child(2) p {
 main .articles article .article-wrapper > div:nth-child(2) h3 {
   font-size: 18px;
   color: #1e1e1e;
-  font-weight: 700;
+  font-weight: 500;
 }
 main .contact form .input .placeholder {
   position: absolute;
