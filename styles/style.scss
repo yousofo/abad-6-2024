@@ -82,21 +82,18 @@
   src: url("./bukra/29LT-Bukra-Boldl.ttf") format("opentype");
 }
 
-
 //variables
 
 $abad-gold: #fdb614;
-
 
 //global styles
 
 body {
   font-family: "29lt-Bukra";
 }
-img{
+img {
   user-select: none;
 }
-
 
 //Shared classes
 
@@ -104,7 +101,7 @@ img{
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.article-tag{
+.article-tag {
   @extend .noto;
   border-radius: 16px;
   padding: 4px 15px;
@@ -114,40 +111,39 @@ img{
   left: 16px;
   bottom: 12px;
 }
-.article-tag-black{
-  background-color: #1E1E1E;
+.article-tag-black {
+  background-color: #1e1e1e;
 }
-.article-tag-blue{
-  background-color: #2241CF;
+.article-tag-blue {
+  background-color: #2241cf;
 }
-.article-tag-yellow{
-  background-color: #EDB423;
+.article-tag-yellow {
+  background-color: #edb423;
 }
-
 
 /////////styles overriding
 
-#slider-range{
-  background-color: #D8D1E2;
+#slider-range {
+  background-color: #d8d1e2;
   height: 2px;
   border: 0 solid transparent !important;
-  .ui-slider-range{
+  .ui-slider-range {
     height: 100%;
-    background: linear-gradient(83.79deg, #1B45B4 3.25%, #1C2792 96.85%);
+    background: linear-gradient(83.79deg, #1b45b4 3.25%, #1c2792 96.85%);
   }
-  .ui-slider-handle{
+  .ui-slider-handle {
     top: 50%;
     width: 14px;
     height: 14px;
-    border: 2px solid #1B45B4;
+    border: 2px solid #1b45b4;
     border-radius: 50%;
     transform: translateY(-50%);
   }
 }
 
 //////////main styling
-/// 
-/// 
+///
+///
 
 //home page
 header {
@@ -158,6 +154,14 @@ header {
     background-color: transparent;
     a {
       white-space: nowrap;
+    }
+    .nav-list-drop{
+      border-radius: 20px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      li{
+        margin: 20px 0;
+      }
     }
   }
 }
@@ -193,11 +197,13 @@ main {
         border: 1px solid transparent;
         &.course-name {
           padding-top: 4px;
-          font-size: 14px;
+          font-size: 13px;
           display: flex;
+          font-weight: 500;
           flex-direction: column;
           > div {
             order: 1;
+            font-size: 12px;
             display: flex;
             gap: 12px;
             span {
@@ -215,8 +221,11 @@ main {
             order: 2;
           }
           @media (min-width: 768px) {
+            font-size: 14px;
+            font-weight: 700;
             > div {
               order: 2 !important;
+              font-size: 14px;
             }
             p {
               order: 1 !important;
@@ -234,10 +243,22 @@ main {
           }
         }
       }
+      td:nth-child(3),td:nth-child(2) {
+        font-size: 12px;
+        font-weight: 400;
+        @media (min-width: 768px) {
+          font-weight: 500;
+        }
+      }
       .btns {
         display: flex;
         align-items: center;
         gap: 8px;
+        font-size: 10px;
+        font-weight: 500;
+        @media (min-width: 768px) {
+          font-size: 12px;
+        }
         button {
           padding: 6px 12px;
           border-radius: 4px;
@@ -254,35 +275,32 @@ main {
         }
       }
     }
-    table th {
-      font-size: 12px;
-    }
     table td {
       font-size: 14px;
     }
     nav {
       li {
         padding: 4px 6px;
-        button{
+        button {
           display: flex;
           align-items: center;
           gap: 3px;
-          svg{
+          svg {
             width: 17px;
             height: 17px;
           }
         }
-        @media (min-width:768px) {
+        @media (min-width: 768px) {
           padding: 8px;
-          button{
+          button {
             gap: 10px;
-            svg{
+            svg {
               width: 24px;
               height: auto;
             }
           }
         }
-        
+
         border-radius: 20px;
         color: #9891a3;
         &.active {
@@ -480,19 +498,20 @@ main {
         #1c2792 96.85%
       );
     }
-    h3,h4{
+    h3,
+    h4 {
       color: #151318;
     }
-    label{
+    label {
       @extend .noto;
-      color: #8A8394;
+      color: #8a8394;
       font-size: 14px;
       font-weight: 500;
     }
   }
 }
-header{
-  .nav-list{
+header {
+  .nav-list {
     top: 100%;
     left: 0;
   }

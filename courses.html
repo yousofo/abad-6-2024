@@ -21,11 +21,11 @@
         <img src="/media/abad-logo.png" alt="" class="min-w-36 max-w-44 w-full">
       </a>
       <ul
-        class="nav-list hidden absolute md:static md:flex flex-col md:flex-row bg-white md:bg-transparent p-4 lg:p-0 max-w-xl w-full justify-between items-center md:text-white text-sm lg:text-base  px-4">
+        class="nav-list  hidden absolute md:static md:flex flex-col md:flex-row bg-white md:bg-transparent p-4 lg:p-0 max-w-xl w-fit md:w-full justify-between items-center md:text-white text-sm lg:text-base  px-4">
         <li>
           <a href="">الرئيسية</a>
         </li>
-        <li class="text-abad-gold border-abad-gold border p-1">
+        <li>
           <a href="/courses.html">الدورات</a>
           <ul>
 
@@ -88,7 +88,8 @@
     <!-- HERO end  -->
     <!-- ================================================= -->
     <!-- COURSES start -->
-    <section class="flex flex-col gap-8 lg:gap-0 lg:flex-row container px-4 max-w-screen-xl -mt-12 sm:-mt-0 md:py-10 mx-auto">
+    <section
+      class="flex flex-col gap-8 lg:gap-0 lg:flex-row container px-4 max-w-screen-xl -mt-12 sm:-mt-0 md:py-10 mx-auto">
       <!-- SERACH FILTER start -->
       <form class="search-filter w-full lg:w-max mx-auto abad-shadow p-5 flex flex-col gap-4 rounded-lg">
         <div class="flex items-center justify-between gap-12 pb-3 border-b border-b-[#D8D1E2]">
@@ -132,7 +133,8 @@
               <h4 class="font-bold text-xs">السعر</h4>
               <p dir="ltr">
                 <!-- <label class="" for="amount">Price range:</label> -->
-                <input type="text" id="amount" value="ريال سعودي0 - ريال سعودي100" readonly="" class="text-xs w-max min-w-60 mb-2 text-[#6D6775] font-bold" style="border:0;">
+                <input type="text" id="amount" value="ريال سعودي0 - ريال سعودي100" readonly=""
+                  class="text-xs w-max min-w-60 mb-2 text-[#6D6775] font-bold" style="border:0;">
               </p>
               <div id="slider-range"></div>
             </div>

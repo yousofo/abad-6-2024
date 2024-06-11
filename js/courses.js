@@ -22,7 +22,7 @@ window.onload = function () {
     $(".nav-list").on("click", (e) => e.stopPropagation())
     console.log(e.isDefaultPrevented())
 
-    $(".nav-list").toggle()
+    $(".nav-list").toggle(300)
     console.log("hi")
   })
 };
