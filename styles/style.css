@@ -465,9 +465,14 @@ footer .social-links > svg {
   cursor: pointer;
 }
 footer h4 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
   margin-bottom: 4px;
+}
+@media (min-width: 768px) {
+  footer h4 {
+    font-size: 18px;
+  }
 }
 footer li {
   flex-direction: column;

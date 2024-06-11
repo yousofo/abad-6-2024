@@ -472,7 +472,10 @@ footer {
     }
   }
   h4 {
-    font-size: 18px;
+    font-size: 16px;
+    @media (min-width:768px) {
+      font-size: 18px;
+    }
     font-weight: 700;
     margin-bottom: 4px;
   }
