@@ -81,16 +81,49 @@
   font-weight: 700;
   src: url("./bukra/29LT-Bukra-Boldl.ttf") format("opentype");
 }
-//////////////////
+
 
 //variables
+
 $abad-gold: #fdb614;
+
+
+//global styles
+
+body {
+  font-family: "29lt-Bukra";
+}
+img{
+  user-select: none;
+}
+
 
 //Shared classes
 
 .abad-shadow {
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
 }
+
+.article-tag{
+  @extend .noto;
+  border-radius: 16px;
+  padding: 4px 15px;
+  color: white;
+  width: fit-content;
+  position: absolute;
+  left: 16px;
+  bottom: 12px;
+}
+.article-tag-black{
+  background-color: #1E1E1E;
+}
+.article-tag-blue{
+  background-color: #2241CF;
+}
+.article-tag-yellow{
+  background-color: #EDB423;
+}
+
 
 /////////styles overriding
 
@@ -112,15 +145,11 @@ $abad-gold: #fdb614;
   }
 }
 
-
 //////////main styling
 /// 
 /// 
 
 //home page
-body {
-  font-family: "29lt-Bukra";
-}
 header {
   nav {
     z-index: 2;
@@ -233,9 +262,28 @@ main {
     }
     nav {
       li {
-        padding: 8px;
+        padding: 4px 6px;
+        button{
+          display: flex;
+          align-items: center;
+          gap: 3px;
+          svg{
+            width: 17px;
+            height: 17px;
+          }
+        }
+        @media (min-width:768px) {
+          padding: 8px;
+          button{
+            gap: 10px;
+            svg{
+              width: 24px;
+              height: auto;
+            }
+          }
+        }
+        
         border-radius: 20px;
-        font-size: 14px;
         color: #9891a3;
         &.active {
           color: white;
@@ -349,10 +397,10 @@ main {
         flex-direction: column;
         gap: 12px;
         box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
-        > img {
+        img {
           width: fit-content;
         }
-        > div {
+        > div:nth-child(2) {
           padding: 12px;
           display: flex;
           flex-direction: column;
