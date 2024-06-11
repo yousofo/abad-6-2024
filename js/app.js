@@ -33,10 +33,11 @@ const swiper2 = new Swiper(".swiper2", {
   },
 });
 window.onload = function () {
-  //
-  document.onclick = () => $(".nav-list").hide()
+  //toggle nav list
+  document.onclick = () => $(".nav-list-drop").hide()
   $(".toggle-nav-list").on("click", (e) => {
     e.stopPropagation()
+    $(".nav-list").addClass("nav-list-drop")
     $(".nav-list").on("click", (e) => e.stopPropagation())
     console.log(e.isDefaultPrevented())
 

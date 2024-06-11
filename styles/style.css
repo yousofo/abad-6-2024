@@ -58,7 +58,7 @@
   font-family: "29lt-Bukra";
   font-style: normal;
   font-weight: 300;
-  src: url("./bukra/29ltbukralight.otf") format("opentype"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ woff2*/
+  src: url("./bukra/29LT-Bukra-Light.ttf") format("opentype"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ woff2*/
 }
 /* BUKRA-regular*/
 @font-face {
@@ -66,18 +66,44 @@
   font-family: "29lt-Bukra";
   font-style: normal;
   font-weight: 400;
-  src: url("./bukra/29ltbukraregular.ttf") format("opentype");
+  src: url("./bukra/29LT-Bukra-Regular.ttf") format("opentype");
 }
-/* BUKRA-800  */
+/* BUKRA-500  */
+@font-face {
+  font-display: swap;
+  font-family: "29lt-Bukra";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./bukra/29LT-Bukra-Medium-2.ttf") format("opentype");
+}
+/* BUKRA-700  */
 @font-face {
   font-display: swap;
   font-family: "29lt-Bukra";
   font-style: normal;
   font-weight: 700;
-  src: url("./bukra/29ltbukrabold.ttf") format("opentype");
+  src: url("./bukra/29LT-Bukra-Boldl.ttf") format("opentype");
 }
 .abad-shadow {
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#slider-range {
+  background-color: #D8D1E2;
+  height: 2px;
+  border: 0 solid transparent !important;
+}
+#slider-range .ui-slider-range {
+  height: 100%;
+  background: linear-gradient(83.79deg, #1B45B4 3.25%, #1C2792 96.85%);
+}
+#slider-range .ui-slider-handle {
+  top: 50%;
+  width: 14px;
+  height: 14px;
+  border: 2px solid #1B45B4;
+  border-radius: 50%;
+  transform: translateY(-50%);
 }
 
 body {

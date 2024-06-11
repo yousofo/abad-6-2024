@@ -3,8 +3,8 @@ window.onload = function () {
   $("#slider-range").slider({
     range: true,
     min: 0,
-    max: 500,
-    values: [75, 300],
+    max: 100,
+    values: [15, 85],
     slide: function (event, ui) {
       $("#amount").val("ريال سعودي" + ui.values[0] + " - ريال سعودي" + ui.values[1]);
     }
@@ -13,9 +13,15 @@ window.onload = function () {
     " - ريال سعودي" + $("#slider-range").slider("values", 1));
 
 
-    
+
   //toggle nav list
-  $(".toggle-nav-list").on("click", () => {
+  document.onclick = () => $(".nav-list-drop").hide()
+  $(".toggle-nav-list").on("click", (e) => {
+    e.stopPropagation()
+    $(".nav-list").addClass("nav-list-drop")
+    $(".nav-list").on("click", (e) => e.stopPropagation())
+    console.log(e.isDefaultPrevented())
+
     $(".nav-list").toggle()
     console.log("hi")
   })
