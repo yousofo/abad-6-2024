@@ -370,6 +370,7 @@ main .courses .courses-cards figure .img img {
   max-width: 300px;
 }
 main .courses .courses-cards figure figcaption {
+  padding-top: 16px;
   display: flex;
   flex-direction: column;
   gap: 16px;
