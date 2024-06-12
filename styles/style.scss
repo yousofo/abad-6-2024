@@ -183,7 +183,6 @@ main {
       transform: translate(-50%, -50%);
     }
   }
-
   .courses {
     .courses-preview-mode {
       color: #0f1416;
@@ -533,7 +532,7 @@ main {
       justify-content: center;
       align-items: center;
       border-radius: 50%;
-      &::before,::after{
+      &::before,&::after{
         content: "";
         z-index: -1;
         left: 0;
@@ -541,24 +540,43 @@ main {
         position: absolute;
         width: 100%;
         height: 100%;
-        transition: .3s;
         border-radius: 50%;
       }
       &::before{
         background: linear-gradient(to right, #1c2792, #1b45b4);
+        transition: .3s;
         opacity: 1;
       }
       &::after{
         background: linear-gradient(to right, #29317e, #2a4ba7);
         opacity: 0;
       }
-      &:hover{
+      &.animate-review-btn{
         &::before{
-          opacity: 0;
+          animation: reduceOpacityAni .3s;
         }
         &::after{
+          animation: growOpacityAni .3s;
+        }
+      }
+      @keyframes growOpacityAni {
+        from{
+          opacity: 0;
+        }
+        to{
           opacity: 1;
         }
+      }
+      @keyframes reduceOpacityAni {
+        from{
+          opacity: 1;
+        }
+        to{
+          opacity: 0;
+        }
+      }
+      &:focus-within{
+        
         // transition: 1s;
         // background: #1e1e1e80;
       }

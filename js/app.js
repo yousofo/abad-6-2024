@@ -69,7 +69,6 @@ window.onload = function () {
   })
 
   //courses filter
-
   function updateFilterUI(current){
     if (filterOptions.mode == "cards") {
       if (current == "all") {
@@ -107,9 +106,24 @@ window.onload = function () {
   })
 
   //home video
-
   $("#playHomeVideo").on("click",(e)=>{
     $("#playHomeVideo").hide()
     document.querySelector("#homeVideo").play()
+  })
+
+  //reviews swipe buttons
+  const reviewsBtn = document.querySelectorAll('.reviewsBtn');
+
+  reviewsBtn.forEach((e)=>{
+    e.addEventListener('click', () => {
+      // Remove the class
+      e.classList.remove('animate-review-btn');
+
+      // Trigger reflow to restart the animation
+      void e.offsetWidth;
+
+      // Re-add the class
+      e.classList.add('animate-review-btn');
+  });
   })
 };

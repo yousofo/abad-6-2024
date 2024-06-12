@@ -520,7 +520,7 @@ main .reviews .swiper1-btn {
   align-items: center;
   border-radius: 50%;
 }
-main .reviews .swiper1-btn::before, main .reviews .swiper1-btn ::after {
+main .reviews .swiper1-btn::before, main .reviews .swiper1-btn::after {
   content: "";
   z-index: -1;
   left: 0;
@@ -528,22 +528,38 @@ main .reviews .swiper1-btn::before, main .reviews .swiper1-btn ::after {
   position: absolute;
   width: 100%;
   height: 100%;
-  transition: 0.3s;
   border-radius: 50%;
 }
 main .reviews .swiper1-btn::before {
   background: linear-gradient(to right, #1c2792, #1b45b4);
+  transition: 0.3s;
   opacity: 1;
 }
 main .reviews .swiper1-btn::after {
   background: linear-gradient(to right, #29317e, #2a4ba7);
   opacity: 0;
 }
-main .reviews .swiper1-btn:hover::before {
-  opacity: 0;
+main .reviews .swiper1-btn.animate-review-btn::before {
+  animation: reduceOpacityAni 0.3s;
 }
-main .reviews .swiper1-btn:hover::after {
-  opacity: 1;
+main .reviews .swiper1-btn.animate-review-btn::after {
+  animation: growOpacityAni 0.3s;
+}
+@keyframes growOpacityAni {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes reduceOpacityAni {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 main .articles article {
   padding: 12px;
