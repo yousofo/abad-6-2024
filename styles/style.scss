@@ -6,6 +6,11 @@
 }
 // ROBOTO font
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap");
+//CAIRO font
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+.cairo-font {
+  font-family: "Cairo", sans-serif;
+}
 //ROBOTO classes
 .noto {
   font-family: "Noto Sans Arabic", sans-serif;
