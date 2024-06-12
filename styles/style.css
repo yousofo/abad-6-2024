@@ -11,7 +11,7 @@
   font-family: "Cairo", sans-serif;
 }
 
-.noto, main .courses .search-filter label, .article-tag {
+.noto, main .reviews .cards .cards-wrapper .card .card-wrapper .review-details, main .courses .search-filter label, .article-tag {
   font-family: "Noto Sans Arabic", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
@@ -491,12 +491,16 @@ main .reviews .cards .cards-wrapper .card .card-wrapper .review-details {
 main .reviews .cards .cards-wrapper .card .card-wrapper .review-details h4 {
   font-size: 18px;
   font-weight: bold;
+  color: #1E1E1E;
 }
 main .reviews .cards .cards-wrapper .card .card-wrapper .review-details p {
   font-size: 14px;
 }
 main .reviews .cards .cards-wrapper .card .card-wrapper .review-text {
-  font: bold;
+  color: #172327;
+  font-size: 15px;
+  line-height: 1.6;
+  font-weight: 400;
 }
 main .reviews .cards .cards-wrapper .card .card-wrapper .review-stars {
   display: flex;
