@@ -106,4 +106,10 @@ window.onload = function () {
     })
   })
 
+  //home video
+
+  $("#playHomeVideo").on("click",(e)=>{
+    $("#playHomeVideo").hide()
+    document.querySelector("#homeVideo").play()
+  })
 };
