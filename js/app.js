@@ -38,7 +38,7 @@ const filterOptions = {
   type: "all"
 }
 const allDataRows = $(".courses-rows tbody tr")
-const allDataCards = $(".courses-cards figure")
+
 
 window.onload = function () {
 
@@ -58,7 +58,7 @@ window.onload = function () {
   $(".courses-preview-mode").on("click", () => {
     $(".courses-preview-mode").toggleClass("active")
     filterOptions.mode = $(".courses-preview-mode.active").data("mode")
-    updateFilterUI(filterOptions.type)
+    updateFilterUI()
     if ($(".courses-preview-mode.active").data("mode") == "cards") {
       $(".courses-rows").hide(0)
       $(".courses-cards").show(300)
@@ -68,23 +68,78 @@ window.onload = function () {
     }
   })
 
+
+  //replace course row with course card
+  function rowToCard(courseType, courseName, courseStartData, courseTime) {
+    return `
+      <figure data-type=${courseType} class="course-card">
+      <div class="img">
+        <img src="/media/abad-course-card.png" alt="">
+      </div>
+      <figcaption>
+        <h4>${courseName}</h4>
+        <div class="course-date">
+          <div>
+            <img src="/media/calendar.png" alt="">
+            <p>${courseStartData}</p>
+          </div>
+          <div>
+            <img src="/media/combo sape.png" alt="">
+            <p>${courseTime}</p>
+          </div>
+        </div>
+        <p>هنا يكتب تفاصيل المحتوي للدورة هنا يكتب تفاصيل المحتوي للدورة هنا يكتب تفاصيل المحتوي للدورة</p>
+        <div class="course-info">
+          <p>البرمجة</p>
+          <p>1500 ريال سعودي</p>
+        </div>
+      </figcaption>
+    </figure>`;
+  }
+
   //courses filter
-  function updateFilterUI(current){
-    if (filterOptions.mode == "cards") {
-      if (current == "all") {
-        $(".courses-cards").html(allDataCards)
-      } else {
-        const newData = allDataCards.filter((i, ele) => $(ele).data("filter") == filterOptions.type)
-        $(".courses-cards").html(newData)
-      }
-    } else {
-      if (current == "all") {
+  function updateFilterUI() {
+    if (filterOptions.mode == "rows") {
+      if (filterOptions.type == "all") {
         $(".courses-rows tbody").html(allDataRows)
       } else {
-        const newData = allDataRows.filter((i, ele) => $(ele).data("filter") == filterOptions.type)
+        const newData = allDataRows.filter((i, ele) => $(ele).data("type") == filterOptions.type)
         $(".courses-rows tbody").html(newData)
       }
+    } else {
+      if (filterOptions.type == "all") {
+        const allDataCards = allDataRows.map((i,e) => {
+          const currentRow = $(e)
+          return rowToCard(currentRow.data("type"), currentRow.data("name"), currentRow.data("date"), currentRow.data("time"))
+        })
+        $(".courses-cards").html([...allDataCards])
+      } else {
+        const newData = allDataRows.filter((i, ele) => $(ele).data("type") == filterOptions.type)
+        const allDataCards = newData.map((i,e) => {
+          let currentRow = $(e)
+          return rowToCard(currentRow.data("type"), currentRow.data("name"), currentRow.data("date"), currentRow.data("time"))
+        })
+        $(".courses-cards").html(...allDataCards)
+      }
+
     }
+    // 
+    // if (filterOptions.mode == "cards") {
+
+    //   if (filterOptions.type == "all") {
+    //     $(".courses-cards").html(allDataCards)
+    //   } else {
+    //     const newData = allDataCards.filter((i, ele) => $(ele).data("type") == filterOptions.type)
+    //     $(".courses-cards").html(newData)
+    //   }
+    // } else {
+    //   if (filterOptions.type == "all") {
+    //     $(".courses-rows tbody").html(allDataRows)
+    //   } else {
+    //     const newData = allDataRows.filter((i, ele) => $(ele).data("type") == filterOptions.type)
+    //     $(".courses-rows tbody").html(newData)
+    //   }
+    // }
   }
 
   //select all list items and loop over them
@@ -99,14 +154,13 @@ window.onload = function () {
       current.addClass("active")
       //add filter type info to filterOptions
       filterOptions.type = current.data("filter")
-      //update ui based on which mode is active
-      updateFilterUI(currentData)
-
+      //update ui
+      updateFilterUI()
     })
   })
 
   //home video
-  $("#playHomeVideo").on("click",(e)=>{
+  $("#playHomeVideo").on("click", (e) => {
     $("#playHomeVideo").hide()
     document.querySelector("#homeVideo").play()
   })
@@ -114,7 +168,7 @@ window.onload = function () {
   //reviews swipe buttons
   const reviewsBtn = document.querySelectorAll('.reviewsBtn');
 
-  reviewsBtn.forEach((e)=>{
+  reviewsBtn.forEach((e) => {
     e.addEventListener('click', () => {
       // Remove the class
       e.classList.remove('animate-review-btn');
@@ -124,6 +178,6 @@ window.onload = function () {
 
       // Re-add the class
       e.classList.add('animate-review-btn');
-  });
+    });
   })
 };

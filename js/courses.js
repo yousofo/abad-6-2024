@@ -21,23 +21,11 @@ window.onload = function () {
 
 
 
-  //toggle nav list
-  document.onclick = () => $(".nav-list-drop").hide()
-  $(".toggle-nav-list").on("click", (e) => {
-    e.stopPropagation()
-    $(".nav-list").addClass("nav-list-drop")
-    $(".nav-list").on("click", (e) => e.stopPropagation())
-    console.log(e.isDefaultPrevented())
-
-    $(".nav-list").toggle(300)
-    console.log("hi")
-  })
-
   //toggle courses preview mode
   $(".courses-preview-mode").on("click", () => {
     $(".courses-preview-mode").toggleClass("active")
     filterOptions.mode = $(".courses-preview-mode.active").data("mode")
-    updateFilterUI(filterOptions.type)
+    updateFilterUI()
     if ($(".courses-preview-mode.active").data("mode") == "cards") {
       $(".courses-rows").hide(0)
       $(".courses-cards").show(300)
@@ -47,23 +35,60 @@ window.onload = function () {
     }
   })
 
-  //courses filter
 
-  function updateFilterUI(current){
-    if (filterOptions.mode == "cards") {
-      if (current == "all") {
-        $(".courses-cards").html(allDataCards)
-      } else {
-        const newData = allDataCards.filter((i, ele) => $(ele).data("filter") == filterOptions.type)
-        $(".courses-cards").html(newData)
-      }
-    } else {
-      if (current == "all") {
+  //replace course row with course card
+  function rowToCard(courseType, courseName, courseStartData, courseTime) {
+    return `
+      <figure data-type=${courseType} class="course-card">
+      <div class="img">
+        <img src="/media/abad-course-card.png" alt="">
+      </div>
+      <figcaption>
+        <h4>${courseName}</h4>
+        <div class="course-date">
+          <div>
+            <img src="/media/calendar.png" alt="">
+            <p>${courseStartData}</p>
+          </div>
+          <div>
+            <img src="/media/combo sape.png" alt="">
+            <p>${courseTime}</p>
+          </div>
+        </div>
+        <p>هنا يكتب تفاصيل المحتوي للدورة هنا يكتب تفاصيل المحتوي للدورة هنا يكتب تفاصيل المحتوي للدورة</p>
+        <div class="course-info">
+          <p>البرمجة</p>
+          <p>1500 ريال سعودي</p>
+        </div>
+      </figcaption>
+    </figure>`;
+  }
+
+  //courses filter
+  function updateFilterUI() {
+    if (filterOptions.mode == "rows") {
+      if (filterOptions.type == "all") {
         $(".courses-rows tbody").html(allDataRows)
       } else {
-        const newData = allDataRows.filter((i, ele) => $(ele).data("filter") == filterOptions.type)
+        const newData = allDataRows.filter((i, ele) => $(ele).data("type") == filterOptions.type)
         $(".courses-rows tbody").html(newData)
       }
+    } else {
+      if (filterOptions.type == "all") {
+        const allDataCards = allDataRows.map((i,e) => {
+          const currentRow = $(e)
+          return rowToCard(currentRow.data("type"), currentRow.data("name"), currentRow.data("date"), currentRow.data("time"))
+        })
+        $(".courses-cards").html([...allDataCards])
+      } else {
+        const newData = allDataRows.filter((i, ele) => $(ele).data("type") == filterOptions.type)
+        const allDataCards = newData.map((i,e) => {
+          let currentRow = $(e)
+          return rowToCard(currentRow.data("type"), currentRow.data("name"), currentRow.data("date"), currentRow.data("time"))
+        })
+        $(".courses-cards").html(...allDataCards)
+      }
+
     }
   }
 
@@ -79,9 +104,8 @@ window.onload = function () {
       current.addClass("active")
       //add filter type info to filterOptions
       filterOptions.type = current.data("filter")
-      //update ui based on which mode is active
-      updateFilterUI(currentData)
-
+      //update ui
+      updateFilterUI()
     })
   })
 };
