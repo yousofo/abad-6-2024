@@ -337,10 +337,10 @@ main .courses table .btns button {
   align-items: center;
   gap: 8px;
 }
-main .courses table .btns button:nth-child(1) {
+main .courses table .btns a:nth-child(1) button {
   background-color: #f6f6f6;
 }
-main .courses table .btns button:nth-child(2) {
+main .courses table .btns a:nth-child(2) button {
   background-color: #f0f6ec;
   color: #6ea641;
 }
@@ -407,7 +407,7 @@ main .courses .courses-cards figure figcaption {
   gap: 16px;
 }
 main .courses .courses-cards figure figcaption h4 {
-  color: #3F3E43;
+  color: #3f3e43;
   font-size: 14px;
   font-weight: 500;
 }
@@ -416,7 +416,7 @@ main .courses .courses-cards figure figcaption .course-date {
   justify-content: space-between;
   font-size: 14px;
   font-weight: 400;
-  color: #3F3E43;
+  color: #3f3e43;
 }
 main .courses .courses-cards figure figcaption .course-date div {
   display: flex;
@@ -427,7 +427,7 @@ main .courses .courses-cards figure figcaption > p {
   font-size: 12px;
   font-weight: 400;
   max-width: 284px;
-  color: #8A8394;
+  color: #8a8394;
 }
 main .courses .courses-cards figure figcaption .course-info {
   display: flex;
@@ -491,7 +491,7 @@ main .reviews .cards .cards-wrapper .card .card-wrapper .review-details {
 main .reviews .cards .cards-wrapper .card .card-wrapper .review-details h4 {
   font-size: 18px;
   font-weight: bold;
-  color: #1E1E1E;
+  color: #1e1e1e;
 }
 main .reviews .cards .cards-wrapper .card .card-wrapper .review-details p {
   font-size: 14px;
@@ -623,6 +623,44 @@ main .contact form .input input:not(:placeholder-shown) + span,
 main .contact form .input input:focus + span {
   font-size: 10px;
   transform: translateY(-170%) !important;
+}
+main .course-details figure a {
+  padding: 14.5px 29px;
+  border-radius: 90px;
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+  display: inline-block;
+  background: linear-gradient(83.79deg, #1b45b4 3.25%, #1c2792 96.85%);
+}
+@media (min-width: 768px) {
+  main .course-details figure a {
+    padding: 16px 32px;
+    font-size: 16px;
+    border-radius: 100px;
+  }
+}
+main .course-details figure .action-btns button {
+  border: 1px solid #32bca3;
+  padding: 14.5px 29px;
+  color: #32bca3;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 90px;
+}
+main .course-details figure .action-btns button:nth-child(2) {
+  padding: 16px;
+  border-radius: 50%;
+}
+@media (min-width: 768px) {
+  main .course-details figure .action-btns button:nth-child(1) {
+    padding: 16px 32px;
+    font-size: 16px;
+    border-radius: 100px;
+  }
+  main .course-details figure .action-btns button:nth-child(2) {
+    padding: 18px;
+  }
 }
 
 footer .social-links > svg {

@@ -62,17 +62,19 @@
     <section class="hero h-dvh md:min-h-[600px] md:h-auto relative">
       <div
         class="intro text-center absolute flex flex-col items-center justify-center gap-4 md:gap-6 text-white w-max max-w-full px-4">
-        <h2 class="text-2xl font-medium md:text-3xl lg:text-4xl xl:text-5xl max-w-60 sm:max-w-fit">تعلم بكل سهولة مع <span
-            class="text-abad-gold whitespace-nowrap">اباد للتدريب</span></h2>
-        <h4 class="text-sm md:text-md max-w-lg leading-loose">معهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية
+        <h2 class="text-2xl font-medium md:text-3xl lg:text-4xl xl:text-5xl max-w-60 sm:max-w-fit">تعلم بكل سهولة مع
+          <span class="text-abad-gold whitespace-nowrap">اباد للتدريب</span>
+        </h2>
+        <h4 class="text-sm md:text-md max-w-lg leading-loose">معهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات
+          التطويرية
           المتخصصة
           في تقنية
           المعلومات.
         </h4>
         <a href="#" class="bg-abad-gold flex items-center gap-5 rounded-xl p-2 px-4 text-black text-sm md:text-base">
           <span class="font-medium">ابدأ التعلم</span>
-          <svg class="text-black rotate-180" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-            fill="none">
+          <svg class="text-black rotate-180" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+            viewBox="0 0 24 24" fill="none">
             <path d="M19 12H5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
             <path d="M12 5L5 12L12 19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
           </svg>
@@ -91,7 +93,7 @@
         src="/media/Animation - 1717986646627.gif" alt="">
       <div class="flex flex-col items-center gap-8 courses container px-4 max-w-screen-xl py-10 mx-auto min-h-[450px]">
 
-        <!-- courses preview options -->
+        <!-- courses preview mode options -->
         <div class="flex md:px-6 justify-between items-center w-full">
           <h3 class="text-lg md:text-4xl font-bold text-[#1E1E1E] noto">دورات أباد للتدريب</h3>
           <ul class="flex justify-center items-center gap-2">
@@ -208,7 +210,7 @@
             </li>
           </ul>
         </nav>
-        <!-- courses table -->
+        <!-- courses table ROWS MODE -->
         <table class="courses-rows w-full px-3 md:px-6 ">
           <thead>
             <tr class="abad-shadow rounded-lg hidden md:table-row">
@@ -218,6 +220,7 @@
               <th class="text-start">الاجراءات</th>
             </tr>
           </thead>
+          <!-- rows data -->
           <tbody>
             <tr data-filter="programming" class="shadow row rounded-lg">
               <td class="course-name">
@@ -245,22 +248,29 @@
               <td>من 06:00 م حتى 10:00 م</td>
               <td>
                 <div class="btns">
-                  <button><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
-                      fill="none">
-                      <path
-                        d="M10.8866 7.99995C10.8866 9.31995 9.81995 10.3866 8.49995 10.3866C7.17995 10.3866 6.11328 9.31995 6.11328 7.99995C6.11328 6.67995 7.17995 5.61328 8.49995 5.61328C9.81995 5.61328 10.8866 6.67995 10.8866 7.99995Z"
-                        fill="#3F3E43" stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path
-                        d="M8.4999 13.5131C10.8532 13.5131 13.0466 12.1264 14.5732 9.7264C15.1732 8.7864 15.1732 7.2064 14.5732 6.2664C13.0466 3.8664 10.8532 2.47974 8.4999 2.47974C6.14656 2.47974 3.95323 3.8664 2.42656 6.2664C1.82656 7.2064 1.82656 8.7864 2.42656 9.7264C3.95323 12.1264 6.14656 13.5131 8.4999 13.5131Z"
-                        stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>التفاصيل</button>
-                  <button><svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11"
-                      fill="none">
-                      <path
-                        d="M6.66667 7.33333H5.33333C4.23973 7.33292 3.16682 7.63143 2.23058 8.1966C1.29435 8.76178 0.530401 9.57211 0.0213343 10.54C0.00702532 10.3604 -9.15218e-05 10.1802 8.88408e-07 10C8.88408e-07 6.318 2.98467 3.33333 6.66667 3.33333V0L13.3333 5.33333L6.66667 10.6667V7.33333Z"
-                        fill="#71A23F" />
-                    </svg>تسجيل</button>
+                  <a href="/course-details.html">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                        <path
+                          d="M10.8866 7.99995C10.8866 9.31995 9.81995 10.3866 8.49995 10.3866C7.17995 10.3866 6.11328 9.31995 6.11328 7.99995C6.11328 6.67995 7.17995 5.61328 8.49995 5.61328C9.81995 5.61328 10.8866 6.67995 10.8866 7.99995Z"
+                          fill="#3F3E43" stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path
+                          d="M8.4999 13.5131C10.8532 13.5131 13.0466 12.1264 14.5732 9.7264C15.1732 8.7864 15.1732 7.2064 14.5732 6.2664C13.0466 3.8664 10.8532 2.47974 8.4999 2.47974C6.14656 2.47974 3.95323 3.8664 2.42656 6.2664C1.82656 7.2064 1.82656 8.7864 2.42656 9.7264C3.95323 12.1264 6.14656 13.5131 8.4999 13.5131Z"
+                          stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      التفاصيل
+                    </button></a>
+                  <a href="/course-details.html">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                        <path
+                          d="M6.66667 7.33333H5.33333C4.23973 7.33292 3.16682 7.63143 2.23058 8.1966C1.29435 8.76178 0.530401 9.57211 0.0213343 10.54C0.00702532 10.3604 -9.15218e-05 10.1802 8.88408e-07 10C8.88408e-07 6.318 2.98467 3.33333 6.66667 3.33333V0L13.3333 5.33333L6.66667 10.6667V7.33333Z"
+                          fill="#71A23F" />
+                      </svg>
+                      تسجيل
+                    </button>
+                  </a>
                 </div>
               </td>
             </tr>
@@ -290,22 +300,29 @@
               <td>من 06:00 م حتى 10:00 م</td>
               <td>
                 <div class="btns">
-                  <button><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
-                      fill="none">
-                      <path
-                        d="M10.8866 7.99995C10.8866 9.31995 9.81995 10.3866 8.49995 10.3866C7.17995 10.3866 6.11328 9.31995 6.11328 7.99995C6.11328 6.67995 7.17995 5.61328 8.49995 5.61328C9.81995 5.61328 10.8866 6.67995 10.8866 7.99995Z"
-                        fill="#3F3E43" stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path
-                        d="M8.4999 13.5131C10.8532 13.5131 13.0466 12.1264 14.5732 9.7264C15.1732 8.7864 15.1732 7.2064 14.5732 6.2664C13.0466 3.8664 10.8532 2.47974 8.4999 2.47974C6.14656 2.47974 3.95323 3.8664 2.42656 6.2664C1.82656 7.2064 1.82656 8.7864 2.42656 9.7264C3.95323 12.1264 6.14656 13.5131 8.4999 13.5131Z"
-                        stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>التفاصيل</button>
-                  <button><svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11"
-                      fill="none">
-                      <path
-                        d="M6.66667 7.33333H5.33333C4.23973 7.33292 3.16682 7.63143 2.23058 8.1966C1.29435 8.76178 0.530401 9.57211 0.0213343 10.54C0.00702532 10.3604 -9.15218e-05 10.1802 8.88408e-07 10C8.88408e-07 6.318 2.98467 3.33333 6.66667 3.33333V0L13.3333 5.33333L6.66667 10.6667V7.33333Z"
-                        fill="#71A23F" />
-                    </svg>تسجيل</button>
+                  <a href="/course-details.html">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                        <path
+                          d="M10.8866 7.99995C10.8866 9.31995 9.81995 10.3866 8.49995 10.3866C7.17995 10.3866 6.11328 9.31995 6.11328 7.99995C6.11328 6.67995 7.17995 5.61328 8.49995 5.61328C9.81995 5.61328 10.8866 6.67995 10.8866 7.99995Z"
+                          fill="#3F3E43" stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path
+                          d="M8.4999 13.5131C10.8532 13.5131 13.0466 12.1264 14.5732 9.7264C15.1732 8.7864 15.1732 7.2064 14.5732 6.2664C13.0466 3.8664 10.8532 2.47974 8.4999 2.47974C6.14656 2.47974 3.95323 3.8664 2.42656 6.2664C1.82656 7.2064 1.82656 8.7864 2.42656 9.7264C3.95323 12.1264 6.14656 13.5131 8.4999 13.5131Z"
+                          stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      التفاصيل
+                    </button></a>
+                  <a href="/course-details.html">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                        <path
+                          d="M6.66667 7.33333H5.33333C4.23973 7.33292 3.16682 7.63143 2.23058 8.1966C1.29435 8.76178 0.530401 9.57211 0.0213343 10.54C0.00702532 10.3604 -9.15218e-05 10.1802 8.88408e-07 10C8.88408e-07 6.318 2.98467 3.33333 6.66667 3.33333V0L13.3333 5.33333L6.66667 10.6667V7.33333Z"
+                          fill="#71A23F" />
+                      </svg>
+                      تسجيل
+                    </button>
+                  </a>
                 </div>
               </td>
             </tr>
@@ -335,22 +352,29 @@
               <td>من 06:00 م حتى 10:00 م</td>
               <td>
                 <div class="btns">
-                  <button><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
-                      fill="none">
-                      <path
-                        d="M10.8866 7.99995C10.8866 9.31995 9.81995 10.3866 8.49995 10.3866C7.17995 10.3866 6.11328 9.31995 6.11328 7.99995C6.11328 6.67995 7.17995 5.61328 8.49995 5.61328C9.81995 5.61328 10.8866 6.67995 10.8866 7.99995Z"
-                        fill="#3F3E43" stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path
-                        d="M8.4999 13.5131C10.8532 13.5131 13.0466 12.1264 14.5732 9.7264C15.1732 8.7864 15.1732 7.2064 14.5732 6.2664C13.0466 3.8664 10.8532 2.47974 8.4999 2.47974C6.14656 2.47974 3.95323 3.8664 2.42656 6.2664C1.82656 7.2064 1.82656 8.7864 2.42656 9.7264C3.95323 12.1264 6.14656 13.5131 8.4999 13.5131Z"
-                        stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>التفاصيل</button>
-                  <button><svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11"
-                      fill="none">
-                      <path
-                        d="M6.66667 7.33333H5.33333C4.23973 7.33292 3.16682 7.63143 2.23058 8.1966C1.29435 8.76178 0.530401 9.57211 0.0213343 10.54C0.00702532 10.3604 -9.15218e-05 10.1802 8.88408e-07 10C8.88408e-07 6.318 2.98467 3.33333 6.66667 3.33333V0L13.3333 5.33333L6.66667 10.6667V7.33333Z"
-                        fill="#71A23F" />
-                    </svg>تسجيل</button>
+                  <a href="/course-details.html">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                        <path
+                          d="M10.8866 7.99995C10.8866 9.31995 9.81995 10.3866 8.49995 10.3866C7.17995 10.3866 6.11328 9.31995 6.11328 7.99995C6.11328 6.67995 7.17995 5.61328 8.49995 5.61328C9.81995 5.61328 10.8866 6.67995 10.8866 7.99995Z"
+                          fill="#3F3E43" stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path
+                          d="M8.4999 13.5131C10.8532 13.5131 13.0466 12.1264 14.5732 9.7264C15.1732 8.7864 15.1732 7.2064 14.5732 6.2664C13.0466 3.8664 10.8532 2.47974 8.4999 2.47974C6.14656 2.47974 3.95323 3.8664 2.42656 6.2664C1.82656 7.2064 1.82656 8.7864 2.42656 9.7264C3.95323 12.1264 6.14656 13.5131 8.4999 13.5131Z"
+                          stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      التفاصيل
+                    </button></a>
+                  <a href="/course-details.html">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                        <path
+                          d="M6.66667 7.33333H5.33333C4.23973 7.33292 3.16682 7.63143 2.23058 8.1966C1.29435 8.76178 0.530401 9.57211 0.0213343 10.54C0.00702532 10.3604 -9.15218e-05 10.1802 8.88408e-07 10C8.88408e-07 6.318 2.98467 3.33333 6.66667 3.33333V0L13.3333 5.33333L6.66667 10.6667V7.33333Z"
+                          fill="#71A23F" />
+                      </svg>
+                      تسجيل
+                    </button>
+                  </a>
                 </div>
               </td>
             </tr>
@@ -380,22 +404,29 @@
               <td>من 06:00 م حتى 10:00 م</td>
               <td>
                 <div class="btns">
-                  <button><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
-                      fill="none">
-                      <path
-                        d="M10.8866 7.99995C10.8866 9.31995 9.81995 10.3866 8.49995 10.3866C7.17995 10.3866 6.11328 9.31995 6.11328 7.99995C6.11328 6.67995 7.17995 5.61328 8.49995 5.61328C9.81995 5.61328 10.8866 6.67995 10.8866 7.99995Z"
-                        fill="#3F3E43" stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path
-                        d="M8.4999 13.5131C10.8532 13.5131 13.0466 12.1264 14.5732 9.7264C15.1732 8.7864 15.1732 7.2064 14.5732 6.2664C13.0466 3.8664 10.8532 2.47974 8.4999 2.47974C6.14656 2.47974 3.95323 3.8664 2.42656 6.2664C1.82656 7.2064 1.82656 8.7864 2.42656 9.7264C3.95323 12.1264 6.14656 13.5131 8.4999 13.5131Z"
-                        stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>التفاصيل</button>
-                  <button><svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11"
-                      fill="none">
-                      <path
-                        d="M6.66667 7.33333H5.33333C4.23973 7.33292 3.16682 7.63143 2.23058 8.1966C1.29435 8.76178 0.530401 9.57211 0.0213343 10.54C0.00702532 10.3604 -9.15218e-05 10.1802 8.88408e-07 10C8.88408e-07 6.318 2.98467 3.33333 6.66667 3.33333V0L13.3333 5.33333L6.66667 10.6667V7.33333Z"
-                        fill="#71A23F" />
-                    </svg>تسجيل</button>
+                  <a href="/course-details.html">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                        <path
+                          d="M10.8866 7.99995C10.8866 9.31995 9.81995 10.3866 8.49995 10.3866C7.17995 10.3866 6.11328 9.31995 6.11328 7.99995C6.11328 6.67995 7.17995 5.61328 8.49995 5.61328C9.81995 5.61328 10.8866 6.67995 10.8866 7.99995Z"
+                          fill="#3F3E43" stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path
+                          d="M8.4999 13.5131C10.8532 13.5131 13.0466 12.1264 14.5732 9.7264C15.1732 8.7864 15.1732 7.2064 14.5732 6.2664C13.0466 3.8664 10.8532 2.47974 8.4999 2.47974C6.14656 2.47974 3.95323 3.8664 2.42656 6.2664C1.82656 7.2064 1.82656 8.7864 2.42656 9.7264C3.95323 12.1264 6.14656 13.5131 8.4999 13.5131Z"
+                          stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      التفاصيل
+                    </button></a>
+                  <a href="/course-details.html">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                        <path
+                          d="M6.66667 7.33333H5.33333C4.23973 7.33292 3.16682 7.63143 2.23058 8.1966C1.29435 8.76178 0.530401 9.57211 0.0213343 10.54C0.00702532 10.3604 -9.15218e-05 10.1802 8.88408e-07 10C8.88408e-07 6.318 2.98467 3.33333 6.66667 3.33333V0L13.3333 5.33333L6.66667 10.6667V7.33333Z"
+                          fill="#71A23F" />
+                      </svg>
+                      تسجيل
+                    </button>
+                  </a>
                 </div>
               </td>
             </tr>
@@ -425,22 +456,29 @@
               <td>من 06:00 م حتى 10:00 م</td>
               <td>
                 <div class="btns">
-                  <button><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
-                      fill="none">
-                      <path
-                        d="M10.8866 7.99995C10.8866 9.31995 9.81995 10.3866 8.49995 10.3866C7.17995 10.3866 6.11328 9.31995 6.11328 7.99995C6.11328 6.67995 7.17995 5.61328 8.49995 5.61328C9.81995 5.61328 10.8866 6.67995 10.8866 7.99995Z"
-                        fill="#3F3E43" stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path
-                        d="M8.4999 13.5131C10.8532 13.5131 13.0466 12.1264 14.5732 9.7264C15.1732 8.7864 15.1732 7.2064 14.5732 6.2664C13.0466 3.8664 10.8532 2.47974 8.4999 2.47974C6.14656 2.47974 3.95323 3.8664 2.42656 6.2664C1.82656 7.2064 1.82656 8.7864 2.42656 9.7264C3.95323 12.1264 6.14656 13.5131 8.4999 13.5131Z"
-                        stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>التفاصيل</button>
-                  <button><svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11"
-                      fill="none">
-                      <path
-                        d="M6.66667 7.33333H5.33333C4.23973 7.33292 3.16682 7.63143 2.23058 8.1966C1.29435 8.76178 0.530401 9.57211 0.0213343 10.54C0.00702532 10.3604 -9.15218e-05 10.1802 8.88408e-07 10C8.88408e-07 6.318 2.98467 3.33333 6.66667 3.33333V0L13.3333 5.33333L6.66667 10.6667V7.33333Z"
-                        fill="#71A23F" />
-                    </svg>تسجيل</button>
+                  <a href="/course-details.html">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                        <path
+                          d="M10.8866 7.99995C10.8866 9.31995 9.81995 10.3866 8.49995 10.3866C7.17995 10.3866 6.11328 9.31995 6.11328 7.99995C6.11328 6.67995 7.17995 5.61328 8.49995 5.61328C9.81995 5.61328 10.8866 6.67995 10.8866 7.99995Z"
+                          fill="#3F3E43" stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path
+                          d="M8.4999 13.5131C10.8532 13.5131 13.0466 12.1264 14.5732 9.7264C15.1732 8.7864 15.1732 7.2064 14.5732 6.2664C13.0466 3.8664 10.8532 2.47974 8.4999 2.47974C6.14656 2.47974 3.95323 3.8664 2.42656 6.2664C1.82656 7.2064 1.82656 8.7864 2.42656 9.7264C3.95323 12.1264 6.14656 13.5131 8.4999 13.5131Z"
+                          stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      التفاصيل
+                    </button></a>
+                  <a href="/course-details.html">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                        <path
+                          d="M6.66667 7.33333H5.33333C4.23973 7.33292 3.16682 7.63143 2.23058 8.1966C1.29435 8.76178 0.530401 9.57211 0.0213343 10.54C0.00702532 10.3604 -9.15218e-05 10.1802 8.88408e-07 10C8.88408e-07 6.318 2.98467 3.33333 6.66667 3.33333V0L13.3333 5.33333L6.66667 10.6667V7.33333Z"
+                          fill="#71A23F" />
+                      </svg>
+                      تسجيل
+                    </button>
+                  </a>
                 </div>
               </td>
             </tr>
@@ -470,28 +508,35 @@
               <td>من 06:00 م حتى 10:00 م</td>
               <td>
                 <div class="btns">
-                  <button><svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16"
-                      fill="none">
-                      <path
-                        d="M10.8866 7.99995C10.8866 9.31995 9.81995 10.3866 8.49995 10.3866C7.17995 10.3866 6.11328 9.31995 6.11328 7.99995C6.11328 6.67995 7.17995 5.61328 8.49995 5.61328C9.81995 5.61328 10.8866 6.67995 10.8866 7.99995Z"
-                        fill="#3F3E43" stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                      <path
-                        d="M8.4999 13.5131C10.8532 13.5131 13.0466 12.1264 14.5732 9.7264C15.1732 8.7864 15.1732 7.2064 14.5732 6.2664C13.0466 3.8664 10.8532 2.47974 8.4999 2.47974C6.14656 2.47974 3.95323 3.8664 2.42656 6.2664C1.82656 7.2064 1.82656 8.7864 2.42656 9.7264C3.95323 12.1264 6.14656 13.5131 8.4999 13.5131Z"
-                        stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>التفاصيل</button>
-                  <button><svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11"
-                      fill="none">
-                      <path
-                        d="M6.66667 7.33333H5.33333C4.23973 7.33292 3.16682 7.63143 2.23058 8.1966C1.29435 8.76178 0.530401 9.57211 0.0213343 10.54C0.00702532 10.3604 -9.15218e-05 10.1802 8.88408e-07 10C8.88408e-07 6.318 2.98467 3.33333 6.66667 3.33333V0L13.3333 5.33333L6.66667 10.6667V7.33333Z"
-                        fill="#71A23F" />
-                    </svg>تسجيل</button>
+                  <a href="/course-details.html">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                        <path
+                          d="M10.8866 7.99995C10.8866 9.31995 9.81995 10.3866 8.49995 10.3866C7.17995 10.3866 6.11328 9.31995 6.11328 7.99995C6.11328 6.67995 7.17995 5.61328 8.49995 5.61328C9.81995 5.61328 10.8866 6.67995 10.8866 7.99995Z"
+                          fill="#3F3E43" stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                        <path
+                          d="M8.4999 13.5131C10.8532 13.5131 13.0466 12.1264 14.5732 9.7264C15.1732 8.7864 15.1732 7.2064 14.5732 6.2664C13.0466 3.8664 10.8532 2.47974 8.4999 2.47974C6.14656 2.47974 3.95323 3.8664 2.42656 6.2664C1.82656 7.2064 1.82656 8.7864 2.42656 9.7264C3.95323 12.1264 6.14656 13.5131 8.4999 13.5131Z"
+                          stroke="#3F3E43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                      </svg>
+                      التفاصيل
+                    </button></a>
+                  <a href="/course-details.html">
+                    <button>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="11" viewBox="0 0 14 11" fill="none">
+                        <path
+                          d="M6.66667 7.33333H5.33333C4.23973 7.33292 3.16682 7.63143 2.23058 8.1966C1.29435 8.76178 0.530401 9.57211 0.0213343 10.54C0.00702532 10.3604 -9.15218e-05 10.1802 8.88408e-07 10C8.88408e-07 6.318 2.98467 3.33333 6.66667 3.33333V0L13.3333 5.33333L6.66667 10.6667V7.33333Z"
+                          fill="#71A23F" />
+                      </svg>
+                      تسجيل
+                    </button>
+                  </a>
                 </div>
               </td>
             </tr>
           </tbody>
         </table>
-
+        <!-- courses table CARDS MODE -->
         <div class="courses-cards min-h-[400px]" style="display: none;">
           <figure data-filter="programming" class="course-card">
             <div class="img">
@@ -632,6 +677,7 @@
             </figcaption>
           </figure>
         </div>
+        <!-- link to all courses page -->
         <a href="/courses.html"
           class="text-white cursor-pointer font-bold px-8 py-2.5 show-all flex items-center gap-5 rounded-xl">
           <span>عرض الكل</span>
@@ -642,7 +688,6 @@
         </a>
       </div>
     </section>
-
     <!-- COURSES end -->
     <!-- ================================================= -->
     <!-- PLAN start -->
@@ -714,7 +759,8 @@
     <section class="reviews relative p-10 overflow-hidden">
       <img src="/media/Review Section.png" class="absolute left-0 top-0 w-full h-full object-cover -z-10" alt="">
       <div class="container max-w-screen-lg mx-auto flex flex-col gap-5">
-        <h3 class="font-bold text-2xl md:text-4xl text-center text-[#172327]">لماذا طلاب <span class="text-abad-gold">اباد
+        <h3 class="font-bold text-2xl md:text-4xl text-center text-[#172327]">لماذا طلاب <span
+            class="text-abad-gold">اباد
             للتدريب</span> <br><span class="inline-block py-2">يحبون التعلم معنا؟</span></h3>
         <!-- Slider main container -->
         <div class="swiper swiper1 cards w-full">
@@ -1048,8 +1094,6 @@
       </div>
     </section>
     <!-- CONTACT end -->
-
-
   </main>
   <!-- FOOTER start -->
   <footer class="bg-[#303030] p-10">
@@ -1116,6 +1160,8 @@
 
   </footer>
   <!-- FOOTER end -->
+  <!-- ================================================= -->
+  <!-- main script -->
   <script type="module" src="/js/app.js">
   </script>
 </body>

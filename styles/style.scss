@@ -7,7 +7,7 @@
 // ROBOTO font
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap");
 //CAIRO font
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap");
 .cairo-font {
   font-family: "Cairo", sans-serif;
 }
@@ -303,10 +303,10 @@ main {
           align-items: center;
           gap: 8px;
         }
-        button:nth-child(1) {
+        a:nth-child(1) button {
           background-color: #f6f6f6;
         }
-        button:nth-child(2) {
+        a:nth-child(2) button {
           background-color: #f0f6ec;
           color: #6ea641;
         }
@@ -318,12 +318,12 @@ main {
     nav {
       li {
         padding: 4px 6px;
-        transition: .3s;
+        transition: 0.3s;
         button {
           display: flex;
           align-items: center;
           gap: 3px;
-          div{
+          div {
             svg {
               width: 17px;
               height: 17px;
@@ -344,8 +344,8 @@ main {
         border-radius: 20px;
         color: #9891a3;
         &.active {
-          button{
-            div{
+          button {
+            div {
               background-color: transparent;
             }
           }
@@ -385,12 +385,13 @@ main {
     .courses-cards {
       display: grid;
       width: 100%;
-      grid-template-columns: repeat(auto-fill, minmax(250px,350px));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
       justify-content: center;
       gap: 32px;
       figure {
         padding: 24px;
-        box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.05),
+          0 1px 2px rgba(0, 0, 0, 0.05);
         width: 100%;
         .img {
           img {
@@ -404,7 +405,7 @@ main {
           flex-direction: column;
           gap: 16px;
           h4 {
-            color: #3F3E43;
+            color: #3f3e43;
             font-size: 14px;
             font-weight: 500;
           }
@@ -413,7 +414,7 @@ main {
             justify-content: space-between;
             font-size: 14px;
             font-weight: 400;
-            color: #3F3E43;
+            color: #3f3e43;
             div {
               display: flex;
               align-items: center;
@@ -424,7 +425,7 @@ main {
             font-size: 12px;
             font-weight: 400;
             max-width: 284px;
-            color: #8A8394;
+            color: #8a8394;
           }
           .course-info {
             display: flex;
@@ -433,7 +434,7 @@ main {
             font-weight: bold;
             p:nth-child(1) {
               //#5BB6D21A
-              background-color: #5BB6D21A;
+              background-color: #5bb6d21a;
               border-radius: 4px;
               padding: 8px;
               color: #1b45b4;
@@ -500,7 +501,7 @@ main {
               h4 {
                 font-size: 18px;
                 font-weight: bold;
-                color: #1E1E1E;
+                color: #1e1e1e;
               }
               p {
                 font-size: 14px;
@@ -532,7 +533,8 @@ main {
       justify-content: center;
       align-items: center;
       border-radius: 50%;
-      &::before,&::after{
+      &::before,
+      &::after {
         content: "";
         z-index: -1;
         left: 0;
@@ -542,41 +544,40 @@ main {
         height: 100%;
         border-radius: 50%;
       }
-      &::before{
+      &::before {
         background: linear-gradient(to right, #1c2792, #1b45b4);
-        transition: .3s;
+        transition: 0.3s;
         opacity: 1;
       }
-      &::after{
+      &::after {
         background: linear-gradient(to right, #29317e, #2a4ba7);
         opacity: 0;
       }
-      &.animate-review-btn{
-        &::before{
-          animation: reduceOpacityAni .3s;
+      &.animate-review-btn {
+        &::before {
+          animation: reduceOpacityAni 0.3s;
         }
-        &::after{
-          animation: growOpacityAni .3s;
+        &::after {
+          animation: growOpacityAni 0.3s;
         }
       }
       @keyframes growOpacityAni {
-        from{
+        from {
           opacity: 0;
         }
-        to{
+        to {
           opacity: 1;
         }
       }
       @keyframes reduceOpacityAni {
-        from{
+        from {
           opacity: 1;
         }
-        to{
+        to {
           opacity: 0;
         }
       }
-      &:focus-within{
-        
+      &:focus-within {
         // transition: 1s;
         // background: #1e1e1e80;
       }
@@ -648,6 +649,49 @@ main {
       }
     }
   }
+  .course-details {
+    figure {
+      a {
+        padding: 14.5px 29px;
+        border-radius: 90px;
+        font-size: 14px;
+        font-weight: 700;
+        color: white;
+        display: inline-block;
+        background: linear-gradient(83.79deg, #1b45b4 3.25%, #1c2792 96.85%);
+        @media (min-width: 768px) {
+          padding: 16px 32px;
+          font-size: 16px;
+          border-radius: 100px;
+        }
+      }
+      
+      .action-btns {
+        button {
+          border: 1px solid #32bca3;
+          padding: 14.5px 29px;
+          color: #32bca3;
+          font-size: 14px;
+          font-weight: 700;
+          border-radius: 90px;
+        }
+        button:nth-child(2) {
+          padding: 16px;
+          border-radius: 50%;
+        }
+        @media (min-width: 768px) {
+          button:nth-child(1) {
+            padding: 16px 32px;
+            font-size: 16px;
+            border-radius: 100px;
+          }
+          button:nth-child(2) {
+            padding: 18px;
+          }
+        }
+      }
+    }
+  }
 }
 footer {
   .social-links {
@@ -676,5 +720,4 @@ footer {
 //courses page
 //
 main {
-  
 }
