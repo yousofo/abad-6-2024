@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/styles/tailwind-output.css">
   <link rel="stylesheet" href="/styles/style.css">
-  <link rel="stylesheet" href="/styles/swiper-bundle.min.css">
   <title>Document</title>
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 </head>
@@ -66,9 +65,10 @@
       </div>
       <!-- BACKGROUND IMG end-->
 
-      <div class="container px-4 flex flex-col sm:flex-row justify-between gap-16 course-details pt-36 m-auto max-w-screen-lg">
+      <div
+        class="container px-4 flex flex-col sm:flex-row justify-between gap-16 course-details pt-36 m-auto max-w-screen-lg">
         <!-- COURSE CONTENT start -->
-        <section>
+        <section class="h-fit flex flex-col gap-60">
           <div class="flex  flex-col gap-6">
             <h6 class="flex flex-wrap items-center text-[#A8A8A8] font-bold text-xs md:text-sm">
               <a href="/">الرئيسية</a>
@@ -84,10 +84,11 @@
               <p class="text-white font-medium w-full sm:w-fit py-1.5">CCNA 200-301 شهادة سيسكو المعتمدة</p>
             </h6>
             <div class="flex flex-col items-start">
-              <h1 class="text-2xl text-[#F9F9F9] flex justify-end pb-2 w-fit" >
+              <h1 class="text-2xl text-[#F9F9F9] flex justify-end pb-2 w-fit">
                 <span dir="rtl" style="unicode-bidi: bidi-override;">شهادة سيسكو المعتمدة CCNA 200-301 </span>
               </h1>
-              <h3 class="text-[#E0E0E0] max-w-lg leading-relaxed text-sm md:text-base">تعرف على مبادئ أساسيات شهادة سيسكوالأكثر شيوعًا
+              <h3 class="text-[#E0E0E0] max-w-lg leading-relaxed text-sm md:text-base">تعرف على مبادئ أساسيات شهادة
+                سيسكوالأكثر شيوعًا
                 والمستخدمة في جميع شركات Fortune 500 الكبرى.</h3>
             </div>
             <div>
@@ -125,10 +126,83 @@
             </div>
 
           </div>
+          <!-- accordions for large screens -->
+          <div class="accordion !hidden sm:!flex">
+            <div class="accordion-item">
+              <button class="accordion-header"> <span>موعد الدورة</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.25 12.5L10 6.25L3.75 12.5" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+               </button>
+              <div class="accordion-content">
+                <div class="wrapper">
+                  <p>Content for موعد الدورة.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header"><span>تفاصيل الاختبارات</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.25 12.5L10 6.25L3.75 12.5" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                </button>
+              <div class="accordion-content">
+                <div class="wrapper">
+                  <p>Content for تفاصيل الاختبارات.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header"><span>مهارات وكفاءات</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.25 12.5L10 6.25L3.75 12.5" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                </button>
+              <div class="accordion-content">
+                <div class="wrapper">
+                  <p>Content for مهارات وكفاءات.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>من يحتاج هذة الدورة</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.25 12.5L10 6.25L3.75 12.5" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                
+              </button>
+              <div class="accordion-content">
+                <div class="wrapper">
+                  <p>Content for من يحتاج هذة الدورة.</p>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button class="accordion-header">
+                <span>اهداف الدورة</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.25 12.5L10 6.25L3.75 12.5" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                </button>
+              <div class="accordion-content">
+                <div class="wrapper">
+                  <p>Content for اهداف الدورة.</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
         <!-- COURSE CONTENT end -->
         <!-- COURSE CARD start -->
-        <figure class="p-5 md:p-6 text-[#252525] bg-white shadow rounded-xl md:rounded-2xl w-full max-w-[373px] h-fit">
+        <figure
+          class="p-5 mx-auto md:p-6 text-[#252525] bg-white shadow rounded-xl md:rounded-2xl w-full max-w-[373px] h-fit">
           <img src="/media/course/course-image.png" alt="">
           <figcaption class="flex flex-col gap-6">
             <h2 class="w-fit font-medium text-[29px] md:text-[32px]" dir="ltr">300 ريال سعودي</h2>
@@ -185,6 +259,77 @@
           </figcaption>
         </figure>
         <!-- COURSE CARD end -->
+        <div class="accordion sm:!hidden">
+          <div class="accordion-item">
+            <button class="accordion-header"> <span>موعد الدورة</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.25 12.5L10 6.25L3.75 12.5" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+             </button>
+            <div class="accordion-content">
+              <div class="wrapper">
+                <p>Content for موعد الدورة.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header"><span>تفاصيل الاختبارات</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.25 12.5L10 6.25L3.75 12.5" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              </button>
+            <div class="accordion-content">
+              <div class="wrapper">
+                <p>Content for تفاصيل الاختبارات.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header"><span>مهارات وكفاءات</span><svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.25 12.5L10 6.25L3.75 12.5" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              </button>
+            <div class="accordion-content">
+              <div class="wrapper">
+                <p>Content for مهارات وكفاءات.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>من يحتاج هذة الدورة</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.25 12.5L10 6.25L3.75 12.5" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              
+            </button>
+            <div class="accordion-content">
+              <div class="wrapper">
+                <p>Content for من يحتاج هذة الدورة.</p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">
+              <span>اهداف الدورة</span>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.25 12.5L10 6.25L3.75 12.5" stroke="#1C1C1C" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              </button>
+            <div class="accordion-content">
+              <div class="wrapper">
+                <p>Content for اهداف الدورة.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
   </main>
   <!-- FOOTER start -->
@@ -252,6 +397,7 @@
 
   </footer>
   <!-- FOOTER end -->
+  <script src="/js/app.js" type="module"></script>
 </body>
 
 </html>

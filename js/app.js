@@ -39,7 +39,7 @@ const filterOptions = {
 }
 const allDataRows = $(".courses-rows tbody tr")
 
-
+//wait content to load
 window.onload = function () {
 
   //toggle nav list
@@ -108,14 +108,14 @@ window.onload = function () {
       }
     } else {
       if (filterOptions.type == "all") {
-        const allDataCards = allDataRows.map((i,e) => {
+        const allDataCards = allDataRows.map((i, e) => {
           const currentRow = $(e)
           return rowToCard(currentRow.data("type"), currentRow.data("name"), currentRow.data("date"), currentRow.data("time"))
         })
         $(".courses-cards").html([...allDataCards])
       } else {
         const newData = allDataRows.filter((i, ele) => $(ele).data("type") == filterOptions.type)
-        const allDataCards = newData.map((i,e) => {
+        const allDataCards = newData.map((i, e) => {
           let currentRow = $(e)
           return rowToCard(currentRow.data("type"), currentRow.data("name"), currentRow.data("date"), currentRow.data("time"))
         })
@@ -180,4 +180,21 @@ window.onload = function () {
       e.classList.add('animate-review-btn');
     });
   })
+
+  // Accordions
+  const accordionItems = document.querySelectorAll('.accordion-item');
+
+  accordionItems.forEach(accordion => {
+    accordion.addEventListener('click', () => {
+      // close all accordions if the one clicked is already opened
+      if(accordion.classList.contains("active")){
+        accordionItems.forEach(e=>e.classList.remove("active"))
+      }else{
+        // close all accordions then open the clicked one
+        accordionItems.forEach(e=>e.classList.remove("active"))
+        accordion.classList.add("active")
+      }
+    });
+  });
+
 };
