@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- shared global styles -->
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/tailwind-output.css">
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+</head>
+
+<body>
+  <header class="absolute w-full top-0 pt-6">
+    <nav class=" container max-w-screen-xl px-4 flex mx-auto justify-between items-center">
+      <a class="text-[#282828]" href="/index.html">
+        <img src="/media/abad-logo.png" alt="" class="min-w-36 max-w-44 w-full">
+      </a>
+      <ul
+        class="nav-list cairo-font  hidden absolute md:static md:flex flex-col md:flex-row bg-white md:bg-transparent p-4 lg:p-0 max-w-xl w-fit md:w-full justify-between items-center md:text-white text-sm lg:text-base  px-4">
+        <li>
+          <a href="">الرئيسية</a>
+        </li>
+        <li>
+          <a href="/courses.html">الدورات</a>
+          <ul>
+          </ul>
+        </li>
+        <li>
+          <a href="/articles.html">المقالات</a>
+        </li>
+        <li>
+          <a href="">الاعتمادات والشركاء</a>
+        </li>
+        <li>
+          <a href="/privacy-terms.html">الخصوصية والاستخدام</a>
+        </li>
+      </ul>
+      <a href="#" class="bg-abad-gold rounded-xl p-2 px-4 hidden md:block">
+        تسجيل الدخول
+      </a>
+      <svg class="md:hidden toggle-nav-list cursor-pointer min-w-8" xmlns="http://www.w3.org/2000/svg" width="33"
+        viewBox="0 0 31 28" fill="none">
+        <rect x="0.318181" y="0.318181" width="29.9091" height="27.3636" rx="4.77272" stroke="white"
+          stroke-width="0.636362" />
+        <path
+          d="M24.1817 21.6363H6.36355C5.66062 21.6363 5.09082 21.0664 5.09082 20.3636C5.09082 19.6607 5.66062 19.0908 6.36355 19.0908H24.1817C24.8846 19.0908 25.4545 19.6607 25.4545 20.3636C25.4544 21.0664 24.8846 21.6363 24.1817 21.6363Z"
+          fill="white" />
+        <path
+          d="M24.1817 15.2727H6.36355C5.66062 15.2727 5.09082 14.7029 5.09082 14C5.09082 13.2971 5.66062 12.7273 6.36355 12.7273H24.1817C24.8846 12.7273 25.4545 13.2971 25.4545 14C25.4545 14.703 24.8846 15.2727 24.1817 15.2727Z"
+          fill="white" />
+        <path
+          d="M24.1817 8.90899H6.36355C5.66062 8.90899 5.09082 8.33919 5.09082 7.63626C5.09082 6.93332 5.66062 6.36353 6.36355 6.36353H24.1817C24.8846 6.36353 25.4545 6.93332 25.4545 7.63626C25.4545 8.33919 24.8846 8.90899 24.1817 8.90899Z"
+          fill="white" />
+      </svg>
+    </nav>
+  </header>
+  <main>
+    <!-- HERO start  -->
+    <section class="hero h-dvh md:min-h-[600px] md:h-auto relative">
+      <div
+        class="intro text-center absolute flex flex-col items-center justify-center gap-5 md:gap-7 text-white w-full max-w-full px-4">
+        <h2 class="text-2xl font-medium md:text-4xl lg:text-5xl xl:text-6xl max-w-60 sm:max-w-fit">
+          <span class="text-abad-gold whitespace-nowrap my-3 block">المقالات</span>
+          <p class="text-sm md:text-2xl font-normal">معهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية المعلومات.</p>
+        </h2>
+      </div>
+      <div class="back-shape overflow-hidden w-full relative -z-10 h-full md:min-h-[600px] md:h-auto">
+        <img class="w-full h-full md:h-auto object-cover md:min-h-[600px]" src="/media/BackgroundHero_rect.png" alt="">
+        <img class="md:w-36 w-20 absolute top-[8vh]  md:top-[10vh] right-0 " src="/media/hero-rectangle.png" alt="">
+      </div>
+    </section>
+    <!-- HERO end  -->
+    <!-- ================================================= -->
+    <!-- main secion start -->
+    <section class="p-8 w-full max-w-screen-xl mx-auto">
+      <div class="flex rounded p-3 gap-2.5 border border-[#D8D1E2] bg-white w-full">
+        <input class="flex-1 text-[#A79FB3] focus:outline-none min-w-48" type="text" placeholder="بحث في المقالات|">
+        <svg class="rounded min-w-8" width="32" height="32" viewBox="0 0 32 32" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="3" fill="url(#paint0_linear_15_4921)" />
+          <path
+            d="M21.6185 19.9816C21.2438 19.6227 20.8791 19.2535 20.5249 18.8744C20.2273 18.572 20.0481 18.352 20.0481 18.352L17.8081 17.2824C18.7049 16.2653 19.1998 14.956 19.2001 13.6C19.2001 10.5128 16.6881 8 13.6001 8C10.5121 8 8.00006 10.5128 8.00006 13.6C8.00006 16.6872 10.5121 19.2 13.6001 19.2C15.0105 19.2 16.2961 18.672 17.2825 17.8088L18.3521 20.0488C18.3521 20.0488 18.5721 20.228 18.8745 20.5256C19.1841 20.816 19.5913 21.2088 19.9817 21.6192L21.0681 22.7328L21.5513 23.2496L23.2481 21.5528L22.7313 21.0696C22.4281 20.772 22.0233 20.3768 21.6185 19.9816ZM13.6001 17.6C11.3945 17.6 9.60006 15.8056 9.60006 13.6C9.60006 11.3944 11.3945 9.6 13.6001 9.6C15.8057 9.6 17.6001 11.3944 17.6001 13.6C17.6001 15.8056 15.8057 17.6 13.6001 17.6Z"
+            fill="white" />
+          <defs>
+            <linearGradient id="paint0_linear_15_4921" x1="8.2424e-07" y1="21.3995" x2="32.8211" y2="17.8274"
+              gradientUnits="userSpaceOnUse">
+              <stop stop-color="#1B45B4" />
+              <stop offset="1" stop-color="#1C2792" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <!-- ================================================= -->
+      <!-- ARTICLES start -->
+      <div class="container articles lg:max-w-screen-lg mx-auto flex flex-wrap pt-10">
+        <article>
+          <div class="article-wrapper ">
+            <div class="img relative">
+              <img src="/media/Iamge.png" alt="">
+              <span class="abosulute article-tag article-tag-yellow">القصص</span>
+            </div>
+            <div>
+              <p>5 مايو 2022 | ,قراءة 4 دقائق</p>
+              <h3>كيف يمكن أن يساعد التسويق عملك أكثر من أي شيء آخر.</h3>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrapper ">
+            <div class="img relative">
+              <img src="/media/Iamge.png" alt="">
+              <span class="abosulute article-tag article-tag-blue">القصص</span>
+            </div>
+            <div>
+              <p>5 مايو 2022 | ,قراءة 4 دقائق</p>
+              <h3>كيف يمكن أن يساعد التسويق عملك أكثر من أي شيء آخر.</h3>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrapper ">
+            <div class="img relative">
+              <img src="/media/Iamge.png" alt="">
+              <span class="abosulute article-tag article-tag-black">القصص</span>
+            </div>
+            <div>
+              <p>5 مايو 2022 | ,قراءة 4 دقائق</p>
+              <h3>كيف يمكن أن يساعد التسويق عملك أكثر من أي شيء آخر.</h3>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrapper ">
+            <div class="img relative">
+              <img src="/media/Iamge.png" alt="">
+              <span class="abosulute article-tag article-tag-black">القصص</span>
+            </div>
+            <div>
+              <p>5 مايو 2022 | ,قراءة 4 دقائق</p>
+              <h3>كيف يمكن أن يساعد التسويق عملك أكثر من أي شيء آخر.</h3>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrapper ">
+            <div class="img relative">
+              <img src="/media/Iamge.png" alt="">
+              <span class="abosulute article-tag article-tag-blue">القصص</span>
+            </div>
+            <div>
+              <p>5 مايو 2022 | ,قراءة 4 دقائق</p>
+              <h3>كيف يمكن أن يساعد التسويق عملك أكثر من أي شيء آخر.</h3>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrapper ">
+            <div class="img relative">
+              <img src="/media/Iamge.png" alt="">
+              <span class="abosulute article-tag article-tag-yellow">القصص</span>
+            </div>
+            <div>
+              <p>5 مايو 2022 | ,قراءة 4 دقائق</p>
+              <h3>كيف يمكن أن يساعد التسويق عملك أكثر من أي شيء آخر.</h3>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrapper ">
+            <div class="img relative">
+              <img src="/media/Iamge.png" alt="">
+              <span class="abosulute article-tag article-tag-yellow">القصص</span>
+            </div>
+            <div>
+              <p>5 مايو 2022 | ,قراءة 4 دقائق</p>
+              <h3>كيف يمكن أن يساعد التسويق عملك أكثر من أي شيء آخر.</h3>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrapper ">
+            <div class="img relative">
+              <img src="/media/Iamge.png" alt="">
+              <span class="abosulute article-tag article-tag-blue">القصص</span>
+            </div>
+            <div>
+              <p>5 مايو 2022 | ,قراءة 4 دقائق</p>
+              <h3>كيف يمكن أن يساعد التسويق عملك أكثر من أي شيء آخر.</h3>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrapper ">
+            <div class="img relative">
+              <img src="/media/Iamge.png" alt="">
+              <span class="abosulute article-tag article-tag-black">القصص</span>
+            </div>
+            <div>
+              <p>5 مايو 2022 | ,قراءة 4 دقائق</p>
+              <h3>كيف يمكن أن يساعد التسويق عملك أكثر من أي شيء آخر.</h3>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrapper ">
+            <div class="img relative">
+              <img src="/media/Iamge.png" alt="">
+              <span class="abosulute article-tag article-tag-black">القصص</span>
+            </div>
+            <div>
+              <p>5 مايو 2022 | ,قراءة 4 دقائق</p>
+              <h3>كيف يمكن أن يساعد التسويق عملك أكثر من أي شيء آخر.</h3>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrapper ">
+            <div class="img relative">
+              <img src="/media/Iamge.png" alt="">
+              <span class="abosulute article-tag article-tag-blue">القصص</span>
+            </div>
+            <div>
+              <p>5 مايو 2022 | ,قراءة 4 دقائق</p>
+              <h3>كيف يمكن أن يساعد التسويق عملك أكثر من أي شيء آخر.</h3>
+            </div>
+          </div>
+        </article>
+        <article>
+          <div class="article-wrapper ">
+            <div class="img relative">
+              <img src="/media/Iamge.png" alt="">
+              <span class="abosulute article-tag article-tag-yellow">القصص</span>
+            </div>
+            <div>
+              <p>5 مايو 2022 | ,قراءة 4 دقائق</p>
+              <h3>كيف يمكن أن يساعد التسويق عملك أكثر من أي شيء آخر.</h3>
+            </div>
+          </div>
+        </article>
+      </div>
+      <!-- ARTICLES end -->
+    </section>
+  </main>
+  <!-- ================================================= -->
+  <!-- FOOTER start -->
+  <footer class="bg-[#303030] p-10">
+    <ul
+      class="container text-white flex-col gap-4 md:gap-0 flex md:flex-row justify-between items-start max-w-screen-lg mx-auto">
+      <li class="max-w-[370px]">
+        <img src="/media/ft-logo 3 (1).png" class="w-fit" alt="">
+        <p class="noto my-3">ومعهد شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية
+          المعلومات. معهد
+          شبكة آباد للتدريب من المعاهد الرائدة في تقديم الدورات التطويرية المتخصصة في تقنية المعلومات. </p>
+        <div class="social-links flex gap-5">
+          <svg class="linkedin" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17"
+            fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M6.07479 6.10013H9.11421V7.56472C9.55204 6.72238 10.6748 5.96555 12.3615 5.96555C15.5949 5.96555 16.3625 7.6423 16.3625 10.7187V16.4163H13.089V11.4193C13.089 9.66738 12.6512 8.67938 11.5366 8.67938C9.99069 8.67938 9.34827 9.74417 9.34827 11.4185V16.4163H6.07479V6.10013ZM0.461588 16.2818H3.73507V5.96555H0.461588V16.2818ZM4.20399 2.60176C4.20411 2.86718 4.1497 3.12999 4.04391 3.37489C3.93812 3.61979 3.78307 3.84191 3.58776 4.02834C3.192 4.40884 2.6563 4.62182 2.09833 4.62051C1.54134 4.62015 1.00688 4.40771 0.610531 4.02913C0.415932 3.84207 0.261403 3.6197 0.155799 3.37477C0.0501947 3.12983 -0.00440887 2.86714 -0.00488281 2.60176C-0.00488281 2.0658 0.216077 1.5528 0.61135 1.17438C1.00735 0.7953 1.54203 0.582771 2.09915 0.583008C2.65727 0.583008 3.19249 0.795966 3.58776 1.17438C3.98222 1.5528 4.20399 2.0658 4.20399 2.60176Z"
+              fill="#007BB6" />
+          </svg>
+          <svg class="pinterest" xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17"
+            fill="none">
+            <path
+              d="M7.1002 0.900391C2.77921 0.900391 0.520508 3.56039 0.520508 6.50539C0.520508 7.93039 1.30614 9.35539 2.5828 10.1154C2.97562 10.3054 2.87741 10.1154 3.17203 8.97539C3.17203 8.88039 3.17203 8.78539 3.07382 8.69039C1.30614 6.60039 2.77921 2.51539 6.90379 2.51539C12.8943 2.51539 11.7158 10.4954 7.98404 10.4954C7.19841 10.5904 6.51098 10.0204 6.51098 9.26039V8.88039C6.90379 7.83539 7.19841 6.88539 7.29661 5.84039C7.29661 3.84539 4.25227 4.13039 4.25227 6.79039C4.25227 7.26539 4.35048 7.74039 4.54689 8.12039C4.54689 8.12039 3.56484 12.0154 3.36844 12.6804C3.17203 13.8204 3.27023 14.9604 3.46664 16.0054C3.36844 16.1004 3.46664 16.1004 3.46664 16.1004H3.56484C4.25227 15.1504 4.8415 14.2004 5.23432 13.1554C5.33252 12.6804 5.82354 10.9704 5.82354 10.9704C6.31457 11.6354 7.19841 12.0154 8.08225 12.0154C11.1266 12.0154 13.2871 9.45039 13.2871 6.31539C13.2871 3.18039 10.5374 0.900391 7.1002 0.900391Z"
+              fill="#CB2056" />
+          </svg>
+          <svg class="google" xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14" fill="none">
+            <path
+              d="M11.6464 5.77241C11.7026 6.1021 11.7428 6.43179 11.7428 6.85945C11.7428 10.5929 9.48397 13.2393 6.08367 13.2393C2.82807 13.2393 0.191406 10.3167 0.191406 6.70801C0.191406 3.09932 2.82807 0.176758 6.08367 0.176758C7.67532 0.176758 9.00166 0.818283 10.0306 1.88754L8.43091 3.5894C7.99681 3.12606 7.23318 2.58254 6.08367 2.58254C4.07404 2.58254 2.43415 4.42697 2.43415 6.70801C2.43415 8.98905 4.07404 10.8335 6.08367 10.8335C8.41483 10.8335 9.29106 8.97122 9.42768 8.0178H6.08367V5.77237H11.6464V5.77241ZM17.3363 5.99137V4.09551H15.6177V5.99137H13.9073V7.89635H15.6177V9.79222H17.3363V7.89635H19.0466V5.99137H17.3363Z"
+              fill="#F04D3F" />
+          </svg>
+          <svg class="facebook" xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
+            <path
+              d="M5.47904 14.6229V8.13438H7.74183L8.07818 5.59392H5.47904V3.97576C5.47904 3.24267 5.69018 2.74076 6.77779 2.74076H8.15593V0.475798C7.48538 0.406282 6.81138 0.372717 6.13701 0.375256C4.13691 0.375256 2.76369 1.55642 2.76369 3.7248V5.58917H0.515625V8.12963H2.7686V14.6229H5.47904Z"
+              fill="#3F7BF8" />
+          </svg>
+          <svg class="twitter" xmlns="http://www.w3.org/2000/svg" width="19" height="15" viewBox="0 0 19 15"
+            fill="none">
+            <path
+              d="M18.5819 1.90915C17.8986 2.20207 17.1645 2.39998 16.3928 2.48944C17.189 2.02853 17.7848 1.3031 18.0688 0.448525C17.3207 0.878392 16.5019 1.18097 15.6481 1.34311C15.0739 0.750043 14.3133 0.35695 13.4845 0.224859C12.6558 0.0927673 11.8051 0.229068 11.0646 0.6126C10.324 0.996132 9.73514 1.60544 9.38928 2.34592C9.04342 3.08639 8.95995 3.91662 9.15183 4.70769C7.63595 4.63406 6.15302 4.25292 4.79927 3.58899C3.44552 2.92506 2.25121 1.99319 1.29384 0.853858C0.966495 1.40011 0.77827 2.03344 0.77827 2.70794C0.777905 3.31515 0.932477 3.91305 1.22827 4.4486C1.52407 4.98416 1.95194 5.4408 2.47393 5.77802C1.86856 5.75939 1.27655 5.60115 0.747172 5.31648V5.36398C0.747111 6.21561 1.05163 7.04103 1.60906 7.70019C2.1665 8.35934 2.94251 8.81164 3.80542 8.98032C3.24384 9.12734 2.65507 9.149 2.08357 9.04365C2.32703 9.77643 2.80128 10.4172 3.43991 10.8763C4.07854 11.3354 4.84959 11.5898 5.64512 11.6039C4.29467 12.6294 2.62687 13.1857 0.910027 13.1833C0.605906 13.1834 0.302041 13.1662 0 13.1318C1.7427 14.2157 3.77133 14.791 5.84316 14.7888C12.8566 14.7888 16.6907 9.16952 16.6907 4.29602C16.6907 4.13769 16.6866 3.97777 16.6792 3.81944C17.425 3.29771 18.0687 2.65165 18.5803 1.91153L18.5819 1.90915Z"
+              fill="#10ADED" />
+          </svg>
+        </div>
+      </li>
+      <li>
+        <h4>الصفحات</h4>
+        <a href="#">الصفحة الرئيسية</a>
+        <a href="#">حول</a>
+        <a href="#">المدونة</a>
+        <a href="#">منشور المدونة</a>
+        <a href="#">فريق أباد</a>
+      </li>
+      <li>
+        <h4>نظرة عامة</h4>
+        <a href="#">جهة الاتصال</a>
+        <a href="#">قصة العميل </a>
+        <a href="#">تسجيل الدخول</a>
+        <a href="#">التسجيل</a>
+        <a href="#">دليل النمط</a>
+      </li>
+      <li>
+        <h4>يتصل:</h4>
+        <a href="tel:001 234 567 89">+001 234 567 89</a>
+        <a href="mailto:hello@nesa.com">hello@nesa.com</a>
+      </li>
+    </ul>
+
+  </footer>
+  <!-- FOOTER end -->
+  <!-- <script type="module" src="/js/jquery-3.7.1.min.js"></script> -->
+  <script src="/js/courses.js"></script>
+</body>
+
+</html>
