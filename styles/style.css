@@ -624,6 +624,64 @@ main .contact form .input input:focus + span {
   font-size: 10px;
   transform: translateY(-170%) !important;
 }
+main .detailed-contact .contact-info {
+  width: -moz-fit-content;
+  width: fit-content;
+  box-shadow: 5px 4px 25px 0px rgba(0, 0, 0, 0.0784313725);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 432px;
+  /*
+  Radius 16px
+  Padding 16px
+  Gap 10px
+  */
+}
+main .detailed-contact .contact-info ul {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+main .detailed-contact .contact-info ul li,
+main .detailed-contact .contact-info ul a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+main .detailed-contact .contact-info ul li svg,
+main .detailed-contact .contact-info ul a svg {
+  min-width: 24px;
+}
+main .detailed-contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+main .detailed-contact form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .detailed-contact form div label {
+  color: #4F4B56;
+  font-weight: 500;
+}
+main .detailed-contact form div input, main .detailed-contact form div textarea {
+  border: 1px solid #D8D1E2;
+  border-radius: 6px;
+  padding: 18px;
+}
+main .detailed-contact form div input::-moz-placeholder, main .detailed-contact form div textarea::-moz-placeholder {
+  color: #A79FB3;
+  font-size: 14px;
+}
+main .detailed-contact form div input::placeholder, main .detailed-contact form div textarea::placeholder {
+  color: #A79FB3;
+  font-size: 14px;
+}
 main .course-details figure a {
   padding: 14.5px 29px;
   border-radius: 90px;

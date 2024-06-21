@@ -623,6 +623,7 @@ main {
       }
     }
   }
+  //index page
   .contact {
     form {
       .input {
@@ -645,6 +646,61 @@ main {
         input:focus + span {
           font-size: 10px;
           transform: translateY(-170%) !important;
+        }
+      }
+    }
+  }
+  //contact page
+  .detailed-contact {
+    .contact-info {
+      width: fit-content;
+      box-shadow: 5px 4px 25px 0px #00000014;
+      border-radius: 16px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      max-width: 432px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        li,
+        a {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          svg{
+            min-width: 24px;
+          }
+        }
+      }
+      /*
+      Radius 16px
+      Padding 16px
+      Gap 10px
+      */
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      div{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        label{
+          color: #4F4B56;
+          font-weight: 500;
+        }
+        input,textarea{
+          border: 1px solid #D8D1E2;
+          border-radius: 6px;
+          padding: 18px;
+          &::placeholder{
+            color: #A79FB3;
+            font-size: 14px;
+          }
         }
       }
     }
@@ -762,10 +818,10 @@ footer {
 }
 
 .accordion-content {
-  .wrapper{
+  .wrapper {
     padding: 15px;
   }
   max-height: 0;
-  transition: .3s max-height;
+  transition: 0.3s max-height;
   background-color: #fff;
 }
